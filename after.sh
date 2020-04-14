@@ -31,5 +31,5 @@ echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
 
 # Install bootloader
 mkdir /boot/grub
-grub-install --target=i386-pc /dev/sda
+grub-install --target=i386-pc /dev/sda --boot-directory=/mnt/boot
 grub-mkconfig -o /boot/grub/grub.cfg
