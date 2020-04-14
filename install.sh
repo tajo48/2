@@ -10,7 +10,7 @@ setfont Lat2-Terminus16.psfu.gz -m 8859-2
 # Setup the disk and partitions
 parted /dev/sda --script mklabel msdos
 parted /dev/sda --script mkpart primary linux-swap 1MiB 300MiB #boot /dev/sda1
-parted /dev/sda --script mkpart primary fat32 300MiB 100% #root /dev/sda2
+parted /dev/sda --script mkpart primary ext4 300MiB 100% #root /dev/sda2
 parted /dev/sda --script set 2 boot on
 
 # Wipefs
@@ -18,7 +18,7 @@ wipefs /dev/sda1
 wipefs /dev/sda2
 
 # Mkfs
-mkfs.fat -F32 /dev/sda2
+mkfs.ext4 /dev/sda2
 mkswap /dev/sda1
 
 # Set up time
