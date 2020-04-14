@@ -18,7 +18,8 @@ wipefs /dev/sda1
 wipefs /dev/sda2
 
 # Mkfs
-mkfs.ext4 /dev/sda2
+mkfs.fat -F32 /dev/sda2
+mkswap /dev/sda1
 
 # Set up time
 timedatectl set-ntp true
@@ -33,7 +34,6 @@ com
 # Mount the partitions
 mount /dev/sda2 /mnt
 mkdir /mnt/boot
-mkswap /dev/sda1
 swapon /dev/sda1
 
 # Install Arch Linux
