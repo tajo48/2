@@ -31,5 +31,5 @@ echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
 
 # Install bootloader
 mkdir /boot/grub
-grub-install /dev/sda
+grub-install --boot-directory=/boot --bootloader-id=ARCH
 grub-mkconfig -o /boot/grub/grub.cfg
