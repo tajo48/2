@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm dhcpcd grub xorg sudo dosfstools os-prober mtools
+pacman -S --noconfirm dhcpcd grub xorg sudo os-prober mtools
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -31,5 +31,5 @@ echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
 
 # Install bootloader
 mkdir /boot/grub
-grub-install --target=x86_64-efi /dev/sda
+grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
