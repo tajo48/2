@@ -18,7 +18,7 @@ wipefs /dev/sda1
 wipefs /dev/sda2
 
 # Mkfs
-mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda2
 
 # Set up time
 timedatectl set-ntp true
