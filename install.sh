@@ -10,7 +10,7 @@ setfont Lat2-Terminus16.psfu.gz -m 8859-2
 # Setup the disk and partitions
 parted /dev/sda --script mklabel dos
 parted /dev/sda --script mkpart primary fat32 1MiB 300MiB #boot /dev/sda1
-parted /dev/sda --script mkpart primary ext4 300MiB 100% #home /dev/sda2
+parted /dev/sda --script mkpart primary ext4 300MiB 100% #root /dev/sda2
 parted /dev/sda --script set 2 boot on
 
 # Wipefs
@@ -31,10 +31,10 @@ pacman-key --refresh-keys
 com
 
 # Mount the partitions
-mount /dev/sda1 /mnt
+mount /dev/sda2 /mnt
 mkdir /mnt/boot
-mkswap /dev/sda2
-swapon /dev/sda2
+mkswap /dev/sda1
+swapon /dev/sda1
 
 # Install Arch Linux
 pacstrap /mnt base linux pacman
