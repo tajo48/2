@@ -33,8 +33,9 @@ echo "user pasword"
 passwd tajo48
 clear
 usermod -aG wheel,audio,video,optical,storage tajo48
-sleep 10s
-echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
+sed -i '/ # %wheel ALL=(ALL) ALL /s/^/jkuhfsjfhsdhflksdjhflksdhflksdhflksdhflksdhflkdhflksdhf/' /etc/sudoers
+#echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
+#sed -i /etc/sudoers -e "s/# %wheel ALL=(ALL) ALL/# %wheel ALL=(ALL) ALL'\n'%wheel ALL=(ALL) ALL/"
 
 # Install bootloader
 mkdir /boot/grub
