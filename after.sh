@@ -27,6 +27,7 @@ echo "root pasword"
 passwd
 clear
 
+# Useradd and sudo
 useradd -m tajo48
 clear
 echo "user pasword"
@@ -37,3 +38,9 @@ usermod -aG wheel,audio,video,optical,storage tajo48
 # Install bootloader
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+
+# Gnome
+pacman -S --noconfirm gnome gnome-extra gdm
+systemctl enable gdm
+pacman -Syu
+
