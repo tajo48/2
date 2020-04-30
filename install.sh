@@ -37,10 +37,13 @@ mkdir /mnt/boot
 swapon /dev/sda1
 
 # Install Arch Linux
-pacstrap /mnt base linux pacman
+pacstrap /mnt base linux pacman sudo
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
+
+# Add sudo to wheel
+echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
 
 # Copy post-install system cinfiguration script to new /root
     wget https://raw.githubusercontent.com/tajo48/2/master/after.sh -O /mnt/root/after.sh
