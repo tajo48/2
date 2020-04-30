@@ -24,11 +24,11 @@ echo "
 # Set root password
 passwd
 
-<<com
-# Create new user
-useradd -mU wheel,uucp,video,audio,storage,games,input,optical tajo48
+useradd -m tajo48
+echo "user pasword"
+passwd tajo48
+usermod -aG wheel,audio,video,optical,storage tajo48
 echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
-com
 
 # Install bootloader
 mkdir /boot/grub
