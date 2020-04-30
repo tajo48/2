@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm dhcpcd grub xorg sudo os-prober mtools
+pacman -S --noconfirm dhcpcd grub xorg os-prober mtools
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
