@@ -39,9 +39,10 @@ usermod -aG wheel,audio,video,optical,storage tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+<<com23
 # Gnome
 pacman -S --noconfirm gnome gnome-extra gdm
 systemctl enable gdm
 pacman -Syu
-poweroff
+com
 
