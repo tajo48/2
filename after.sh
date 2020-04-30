@@ -35,6 +35,5 @@ clear
 usermod -aG wheel,audio,video,optical,storage tajo48
 
 # Install bootloader
-mkdir /boot/grub
-grub-install --target=i386-pc /dev/sda --boot-directory=/mnt/boot
+grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
