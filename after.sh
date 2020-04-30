@@ -15,11 +15,11 @@ locale-gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
 # Set hostname
-echo "ARCH" >> /etc/hostname
+echo "tj" >> /etc/hostname
 echo "
 127.0.0.1 localhost
 ::1
-127.0.1.1 ARCH.localdomain  ARCH" >> /etc/hosts
+127.0.1.1 tj.localdomain  tj" >> /etc/hosts
 
 # Set root password
 clear
