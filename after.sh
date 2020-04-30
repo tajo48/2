@@ -22,11 +22,16 @@ echo "
 127.0.1.1 ARCH.localdomain  ARCH" >> /etc/hosts
 
 # Set root password
+clear
+echo "root pasword"
 passwd
+clear
 
 useradd -m tajo48
+clear
 echo "user pasword"
 passwd tajo48
+clear
 usermod -aG wheel,audio,video,optical,storage tajo48
 echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
 
