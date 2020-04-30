@@ -43,5 +43,5 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S --noconfirm gnome gnome-extra gdm
 systemctl enable gdm
 pacman -Syu
-reboot
+poweroff
 
