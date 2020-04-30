@@ -43,8 +43,8 @@ pacstrap /mnt base linux pacman sudo
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Add sudo to wheel
-echo "%wheel ALL=(ALL) ALL 
-$(cat /etc/sudoers)" > /etc/sudoers
+#echo "%wheel ALL=(ALL) ALL $(cat /etc/sudoers)" > /etc/sudoers
+sed -i /etc/sudoers -e "s/# %wheel ALL=(ALL) ALL/# %wheel ALL=(ALL) ALL'\n'%wheel ALL=(ALL) ALL/"
 
 # Copy post-install system cinfiguration script to new /root
     wget https://raw.githubusercontent.com/tajo48/2/master/after.sh -O /mnt/root/after.sh
