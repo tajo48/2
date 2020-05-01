@@ -6,9 +6,9 @@ timedatectl set-timezone Europe/Warsaw
 hwclock --systohc
 
 # Set locale to en_US.UTF-8 UTF-8
-locale-gen
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+locale-gen
 
 # Set hostname
 echo "ARCH" >> /etc/hostname
