@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm grub xorg xorg-server os-prober mtools dhcpcd
+pacman -S --noconfirm grub xorg xorg-server os-prober mtools dhcpcd vim
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
