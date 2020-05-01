@@ -34,7 +34,6 @@ usermod -aG wheel,audio,video,optical,storage tajo48
 # Install bootloader
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
-systemctl enable NetworkManager.service
 
 <<com23
 # Gnome
