@@ -3,6 +3,7 @@
 pacman -S --noconfirm grub xorg xorg-server os-prober mtools dhcpcd
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
+sleep 10s
 hwclock --systohc
 
 # Set locale to en_US.UTF-8 UTF-8
@@ -24,6 +25,8 @@ passwd
 clear
 
 # Useradd,internet and sudo 
+sed -i '/%wheel ALL=(ALL) ALL/s/^#//g' /etc/sudoers
+sleep 10s
 systemctl enable dhcpcd
 useradd -m tajo48
 clear
