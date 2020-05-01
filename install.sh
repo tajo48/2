@@ -37,7 +37,7 @@ mkdir /mnt/boot
 swapon /dev/sda1
 
 # Install Arch Linux
-pacstrap /mnt base linux pacman sudo
+pacstrap /mnt base linux pacman sudo NetworkManager
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
