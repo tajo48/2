@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm dhcpcd grub xorg os-prober mtools
+pacman -S --noconfirm dhcpcd grub xorg xorg-server os-prober mtools
 # Set date time
 timedatectl set-timezone Europe/Warsaw
 hwclock --systohc
@@ -34,6 +34,7 @@ usermod -aG wheel,audio,video,optical,storage tajo48
 # Install bootloader
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+systemctl enable NetworkManager.service
 
 <<com23
 # Gnome
