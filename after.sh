@@ -6,12 +6,9 @@ ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
 
 # Set locale to en_US.UTF-8 UTF-8
-locale-gen
-echo "
-en_US.UTF-8 UTF-8
-pl_PL.UTF-8 UTF-8
-" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+locale-gen
 
 # Set hostname
 #echo "tj" >> /etc/hostname
@@ -44,4 +41,4 @@ pacman -S --noconfirm gnome gnome-extra gdm
 systemctl enable gdm
 pacman -Syu
 com23
-
+#pl_PL.UTF-8 UTF-8
