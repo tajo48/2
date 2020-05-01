@@ -2,20 +2,20 @@
 
 pacman -S --noconfirm dhcpcd grub xorg os-prober mtools
 # Set date time
-ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
+timedatectl set-timezone Europe/Warsaw
 hwclock --systohc
 
 # Set locale to en_US.UTF-8 UTF-8
+locale-gen
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
-locale-gen
 
 # Set hostname
-#echo "tj" >> /etc/hostname
-#echo "
-#127.0.0.1	localhost
-#::1		localhost
-#127.0.1.1	tj.localdomain	tj" >> /etc/hosts
+echo "ARCH" >> /etc/hostname
+echo "
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	ARCH" >> /etc/hosts
 
 # Set root password
 clear
