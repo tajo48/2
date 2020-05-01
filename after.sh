@@ -1,8 +1,8 @@
 #! /bin/bash
 
-pacman -S --noconfirm dhcpcd grub xorg xorg-server os-prober mtools
+pacman -S --noconfirm grub xorg xorg-server os-prober mtools dhcpcd
 # Set date time
-timedatectl set-timezone Europe/Warsaw
+ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
 
 # Set locale to en_US.UTF-8 UTF-8
@@ -23,7 +23,8 @@ echo "root pasword"
 passwd
 clear
 
-# Useradd and sudo
+# Useradd,internet and sudo 
+systemctl enable dhcpcd
 useradd -m tajo48
 clear
 echo "user pasword"
