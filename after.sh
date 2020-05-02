@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-server-utils xorg-xinit
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
