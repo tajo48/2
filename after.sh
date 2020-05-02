@@ -47,15 +47,15 @@ com1
 
 #DWM
 pacman -S --noconfirm xorg-xinit xorg fontconfig freetype2
-cd /usr/src
 git clone git://git.suckless.org/dwm
-git clone git://git.suckless.org/st
-git clone git://git.suckless.org/dmenu
-cd /usr/src/dmenu
-make clean install
+#git clone git://git.suckless.org/st
+#git clone git://git.suckless.org/dmenu
+#cd /usr/src/dmenu
+#make clean install
 cd /usr/src/dwm
+cp config.def.h config.h
 make clean install
-cd /usr/src/st
-make clean install
+#cd /usr/src/st
+#make clean install
 #echo "exec dwm $(cat .xinitrc)" > .xinitrc
 #startx
