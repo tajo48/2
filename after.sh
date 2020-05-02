@@ -48,7 +48,7 @@ com1
 #DWM
 pacman -S --noconfirm xorg-xinit xorg fontconfig freetype2
 cd /usr/src
-git clone git://git.suckless.org/dwm
+wget https://dl.suckless.org/dwm/dwm-6.2.tar.gz
 #git clone git://git.suckless.org/st
 #git clone git://git.suckless.org/dmenu
 #cd /usr/src/dmenu
