@@ -56,4 +56,5 @@ cd /usr/src/dwm
 make clean install
 cd /usr/src/st
 make clean install
-#echo "exec dwm $(cat .xinitrc)" > .xinitrc
+echo "exec dwm $(cat .xinitrc)" > .xinitrc
+startx
