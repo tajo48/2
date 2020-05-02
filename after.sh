@@ -40,6 +40,6 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-#qtile wm
-pacman -S --noconfirm qtile feh firefox rxvt-unicode dmenu
-echo "exec qtile" >> ~/.xinitrc
+#i3 wm
+pacman -S --noconfirm i3 feh firefox rxvt-unicode dmenu
+echo "exec i3" >> ~/.xinitrc
