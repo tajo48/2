@@ -67,3 +67,4 @@ com1
 pacman -S --noconfirm i3 feh firefox rxvt-unicode lightdm-webkit2-greeter lightdm
 sed -i '/lightdm-webkit2-greeter/s/^#//g' /etc/lightdm/lightdm.conf
 sudo systemctl enable lightdm -f
+sudo systemctl start lightdm -f
