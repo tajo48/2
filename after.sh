@@ -1,7 +1,8 @@
 #! /bin/bash
 
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg
-#xorg-xinit
+#programs
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-server-utils xorg-xinit
+
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -39,32 +40,6 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-<<com1
-# Gnome
-pacman -S --noconfirm gnome gnome-extra gdm
-systemctl enable gdm
-pacman -Syu
-
-#DWM
-pacman -S --noconfirm xorg-xinit xorg fontconfig freetype2
-cd /usr/src
-wget https://dl.suckless.org/dwm/dwm-6.2.tar.gz
-#git clone git://git.suckless.org/st
-#git clone git://git.suckless.org/dmenu
-#cd /usr/src/dmenu
-#make clean install
-cd /usr/src/dwm
-cp config.def.h config.h
-make clean install
-#cd /usr/src/st
-#make clean install
-#echo "exec dwm $(cat .xinitrc)" > .xinitrc
-#startx
-#DWM's not working
-com1
-
 #i3 wm
-pacman -S --noconfirm i3 feh firefox rxvt-unicode lightdm-webkit2-greeter lightdm
-sed -i '/lightdm-webkit2-greeter/s/^#//g' /etc/lightdm/lightdm.conf
-sudo systemctl enable lightdm -f
-sudo systemctl start lightdm -f
+pacman -S --noconfirm i3 feh firefox rxvt-unicode
+echo "exec i3" >> ~/.xinitrc
