@@ -1,8 +1,5 @@
 #! /bin/bash
 
-# Timectl
-timedatectl set-ntp true
-
 # Font
 loadkeys pl
 setfont Lat2-Terminus16.psfu.gz -m 8859-2
