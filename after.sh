@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm grub xorg xorg-server os-prober mtools dhcpcd vim
+pacman -S --noconfirm grub xorg xorg-server os-prober mtools dhcpcd vim git
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -32,13 +32,23 @@ clear
 echo "user pasword"
 passwd tajo48
 clear
-usermod -aG wheel,audio,video,optical,storage tajo48
+usermod -aG wheel,audio,video,optical,storage,users tajo48
 
 # Install bootloader
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+<<com1
 # Gnome
 pacman -S --noconfirm gnome gnome-extra gdm
 systemctl enable gdm
 pacman -Syu
+com1
+
+#DWM
+cd /usr/src
+git clone git://git.suckless.org/dwm
+git clone git://git.suckless.org/st
+git clone git://git.suckless.org/dmenu
+make clean install
+#echo "exec dwm $(cat .xinitrc)" > .xinitrc
