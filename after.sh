@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm grub xorg-xinit xorg os-prober mtools dhcpcd vim git make
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -46,6 +46,7 @@ pacman -Syu
 com1
 
 #DWM
+pacman -S --noconfirm xorg-xinit xorg fontconfig freetype2
 cd /usr/src
 git clone git://git.suckless.org/dwm
 git clone git://git.suckless.org/st
@@ -56,5 +57,5 @@ cd /usr/src/dwm
 make clean install
 cd /usr/src/st
 make clean install
-echo "exec dwm $(cat .xinitrc)" > .xinitrc
-startx
+#echo "exec dwm $(cat .xinitrc)" > .xinitrc
+#startx
