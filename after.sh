@@ -1,6 +1,6 @@
 #! /bin/bash
 
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-xinit xorg
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -61,3 +61,8 @@ make clean install
 #startx
 #DWM's not working
 com1
+
+#i3 wm
+pacman -S --noconfirm i3 feh firefox rxvt-unicode lightdm-webkit2-greeter lightdm
+sed -i '/lightdm-webkit2-greeter/s/^#//g' /etc/lightdm/lightdm.conf
+sudo systemctl enable lightdm -f
