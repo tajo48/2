@@ -43,7 +43,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S --noconfirm gnome gnome-extra gdm
 systemctl enable gdm
 pacman -Syu
-com1
 
 #DWM
 pacman -S --noconfirm xorg-xinit xorg fontconfig freetype2
@@ -60,3 +59,5 @@ make clean install
 #make clean install
 #echo "exec dwm $(cat .xinitrc)" > .xinitrc
 #startx
+#DWM's not working
+com1
