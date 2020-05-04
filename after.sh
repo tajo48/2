@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -21,21 +21,15 @@ echo "
 127.0.1.1	ARCH" >> /etc/hosts
 
 # Set root password
-clear
 echo "root pasword"
 echo -en "1\n1" | passwd
-sleep 10s
-clear
 
 # Useradd,internet and sudo 
 sed -i '/%wheel ALL=(ALL) ALL/s/^#//g' /etc/sudoers
 systemctl enable dhcpcd
 useradd -m tajo48
-clear
 echo "user pasword"
 echo -en "1\n1" | passwd tajo48
-sleep 10s
-clear
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 
 # Install bootloader
@@ -45,3 +39,4 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi
 echo "exec i3" >> ~/.xinitrc
+#curl http://example.org/picture.jpg -O picture.jpg
