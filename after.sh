@@ -39,4 +39,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi
 echo "exec i3" >> ~/.xinitrc
-#curl http://example.org/picture.jpg -O picture.jpg
+curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
+startx
+sed '4 i TEST123TEST123' .config/i3/config
+vim .config/i3/config
