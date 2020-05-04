@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -39,8 +39,13 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch
 echo "exec i3" >> ~/.xinitrc
-curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
-startx
-killall i3
-sed '4 i TEST123TEST123' .config/i3/config
+#curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
+#startx
+#killall i3
+#sed '4 i TEST123TEST123' .config/i3/config
 neofetch
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
+tar -xvzf st.tar.gz
+cd st
+makepkg
+pacman -U st
