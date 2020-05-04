@@ -43,5 +43,5 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #i3 wm
-pacman -S --noconfirm i3 feh firefox rxvt-unicode dmenu
+pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi
 echo "exec i3" >> ~/.xinitrc
