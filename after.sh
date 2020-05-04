@@ -23,7 +23,7 @@ echo "
 # Set root password
 clear
 echo "root pasword"
-passwd
+echo -en "1\n1" | passwd
 clear
 
 # Useradd,internet and sudo 
@@ -32,7 +32,7 @@ systemctl enable dhcpcd
 useradd -m tajo48
 clear
 echo "user pasword"
-passwd tajo48
+echo -en "1\n1" | passwd tajo48
 clear
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 
