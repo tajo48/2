@@ -41,5 +41,6 @@ pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi
 echo "exec i3" >> ~/.xinitrc
 curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
 startx
+init 3
 sed '4 i TEST123TEST123' .config/i3/config
 vim .config/i3/config
