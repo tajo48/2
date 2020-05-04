@@ -37,15 +37,10 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #i3 wm
-pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch
+pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake
 echo "exec i3" >> ~/.xinitrc
-#curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
+curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
 #startx
 #killall i3
 #sed '4 i TEST123TEST123' .config/i3/config
 neofetch
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
-tar -xvzf st.tar.gz
-cd st
-makepkg
-pacman -U st
