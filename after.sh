@@ -24,6 +24,7 @@ echo "
 clear
 echo "root pasword"
 echo -en "1\n1" | passwd
+sleep 10s
 clear
 
 # Useradd,internet and sudo 
@@ -33,6 +34,7 @@ useradd -m tajo48
 clear
 echo "user pasword"
 echo -en "1\n1" | passwd tajo48
+sleep 10s
 clear
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 
