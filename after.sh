@@ -41,7 +41,7 @@ pacman -S --noconfirm gnome gnome-extra gdm
 systemctl enable gdm
 pacman -Syu
 
-<com
+<<com
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake
 echo "exec i3" >> ~/.xinitrc
