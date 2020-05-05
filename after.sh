@@ -38,10 +38,11 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch termite
-echo "exec i3" >> ~/.xinitrc
+echo "exec i3-gaps" >> ~/.xinitrc
 mkdir /root/.config
-mkdir /root/.config/i3
+mkdir /root/.config/i3-gaps
 mkdir /home/tajo48/photos
 #curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg 
-wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3/config
+wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3-gaps/config
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg 
+startx
