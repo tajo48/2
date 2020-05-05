@@ -46,8 +46,6 @@ bindsym $mod+Return exec termite
 #bindsym Mod4+period exec amixer set Master -q 5%+
 #install amixer
 
-#hide borders
-hide_edge_borders both
 #end
 
 
