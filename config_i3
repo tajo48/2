@@ -47,8 +47,9 @@ bindsym $mod+Return exec termite
 #install amixer
 
 #gaps?
-smart_gaps on
-
+#smart_gaps on
+gaps inner 5
+gaps outer 5
 #end
 
 
