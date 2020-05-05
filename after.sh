@@ -41,10 +41,5 @@ pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake
 echo "exec i3" >> ~/.xinitrc
 mkdir /root/.config
 mkdir /root/.config/i3
-#curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
-wget https://raw.githubusercontent.com/tajo48/2/master/config -O /root/.config/i3/config
-#startx
-#killall i3
-sed -i '4 i # This is the extra line' ~/.config/i3/config
-#neofetch
-vim ~/.config/i3/config
+curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg 
+wget https://raw.githubusercontent.com/tajo48/2/master/config -O ~/.config/i3/config
