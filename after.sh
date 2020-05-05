@@ -45,6 +45,6 @@ mkdir /root/.config/i3
 wget https://raw.githubusercontent.com/tajo48/2/master/config -O /root/.config/i3/config
 #startx
 #killall i3
-sed '4 i #This is the extra line' ~/.config/i3/config
+sed -i '4 i #This is the extra line' ~/.config/i3/config
 #neofetch
 vim ~/.config/i3/config
