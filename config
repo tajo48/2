@@ -11,6 +11,10 @@
 
 set $mod Mod4
 
+#feh
+exec feh --bg-scale /home/tajo48/tapety/wallpaper.jpg
+
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
