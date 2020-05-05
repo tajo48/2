@@ -37,7 +37,7 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #i3 wm
-pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake rofi 	gnome-terminal
+pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake rofi gnome-terminal
 echo "exec i3" >> ~/.xinitrc
 mkdir /root/.config
 mkdir /root/.config/i3
