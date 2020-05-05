@@ -41,6 +41,6 @@ pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake
 echo "exec i3" >> ~/.xinitrc
 mkdir /root/.config
 mkdir /root/.config/i3
-mkdir /home/tajo48/tapety
-curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/tapety/tapeta.jpg 
+mkdir /home/tajo48/photos
+curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg 
 wget https://raw.githubusercontent.com/tajo48/2/master/config -O ~/.config/i3/config
