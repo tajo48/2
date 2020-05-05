@@ -12,7 +12,7 @@
 set $mod Mod4
 
 #feh
-exec feh --bg-scale /home/tajo48/photos/wallpaper.jpg 
+exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg 
 
 
 # Font for window titles. Will also be used by the bar unless a different font
