@@ -36,20 +36,13 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-# Gnome
-pacman -S --noconfirm gnome gnome-extra gdm
-systemctl enable gdm
-pacman -Syu
-
-<<com
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake
 echo "exec i3" >> ~/.xinitrc
 curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O a.jpg
-wget https://raw.githubusercontent.com/tajo48/2/master/config -O .config/i3/config
+#wget https://raw.githubusercontent.com/tajo48/2/master/config -O .config/i3/config
 #startx
 #killall i3
-#sed '4 i TEST123TEST123' .config/i3/config
+sed '4 i TEST123TEST123' ~/.config/i3/config
 neofetch
-cat .config/i3/config
-com
+cat ~/.config/i3/config
