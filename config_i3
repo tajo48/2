@@ -41,6 +41,10 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # start a terminal
 bindsym $mod+Return exec gnome-terminal
+
+#bindsym Mod4+comma exec amixer set Master -q 5%-
+#bindsym Mod4+period exec amixer set Master -q 5%+
+#install amixer
 #end
 
 
