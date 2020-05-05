@@ -36,6 +36,11 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+# Gnome
+pacman -S --noconfirm gnome gnome-extra gdm
+systemctl enable gdm
+pacman -Syu
+
 <com
 #i3 wm
 pacman -S --noconfirm i3 feh firefox rxvt-unicode rofi neofetch guake
