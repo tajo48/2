@@ -40,7 +40,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec termite
 
 #bindsym Mod4+comma exec amixer set Master -q 5%-
 #bindsym Mod4+period exec amixer set Master -q 5%+
