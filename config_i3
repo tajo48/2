@@ -50,6 +50,7 @@ bindsym $mod+Return exec termite
 #smart_gaps on
 gaps inner 5
 gaps outer 5
+new_window 1pixel
 #end
 
 
