@@ -53,6 +53,7 @@ rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
+chmod +x /usr/bin/makepkg
 
 #dwm try
 cd /home/tajo48
