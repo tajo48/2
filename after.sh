@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft lxdm mc fakeroot binutils patch pkgconf base-devel
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft lightdm mc fakeroot binutils patch pkgconf base-devel
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -75,7 +75,7 @@ cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
 echo "makepkg -s -i -c --noconfirm"
-systemctl enable lxdm.service
+systemctl enable lightdm.service
 
 #startx
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
