@@ -61,8 +61,8 @@ rm /root/makepkg
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz /root/dwm.tar.gr
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz /root/st.tar.gr
-tar -xzvf dwm.tar.gz
-tar -xzvf st.tar.gz
+tar -xvf dwm.tar.gz
+tar -xvf st.tar.gz
 cd /root/dwm
 makepkg -s
 pacman -U --noconfirm dwm.pkg.tar.xz
