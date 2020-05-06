@@ -49,6 +49,6 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 echo "Section "InputClass"
     Identifier "system-keyboard"
     MatchIsKeyboard "on"
-    Option "XkbLayout" "de" 
+    Option "XkbLayout" "pl" 
 EndSection" >>  /etc/X11/xorg.conf.d/
 #startx
