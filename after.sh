@@ -20,16 +20,14 @@ echo "
 ::1		localhost
 127.0.1.1	ARCH" >> /etc/hosts
 
-# Set root password
-echo "root pasword"
+# Set root passwd
 echo -en "root\nroot" | passwd
 
 # Useradd,internet and sudo 
 sed -i '/%wheel ALL=(ALL) ALL/s/^#//g' /etc/sudoers
 systemctl enable dhcpcd
 useradd -m tajo48
-echo "user pasword"
-echo -en "pass\npass" | passwd user
+echo -en "1\n1" | passwd user
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 
 # Install bootloader
