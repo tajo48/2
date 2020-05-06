@@ -62,10 +62,8 @@ wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
 tar -xvf dwm.tar.gz
 tar -xvf st.tar.gz
-
 cd /home/tajo48/dwm
-makepkg -s
+makepkg -s -i -c
 cd /home/tajo48/st
-makepkg -s
-pacman -U --noconfirm dwm.pkg.tar.xz st.pkg.tar.xz
+makepkg -s -i -c
 #> /dev/null 2>&1
