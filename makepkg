@@ -191,7 +191,8 @@ update_pkgver() {
 	msg "$(gettext "Starting %s()...")" "pkgver"
 	newpkgver=$(run_function_safe pkgver)
 	if (( $? != 0 )); then
-		error_function pkgver
+		echo ERROOOOOOOR KURWA
+		#error_function pkgver
 	fi
 	if ! check_pkgver "$newpkgver"; then
 		error "$(gettext "pkgver() generated an invalid version: %s")" "$newpkgver"
@@ -351,14 +352,13 @@ remove_deps() {
 }
 
 error_function() {
-	# first exit all subshells, then print the error
-	#if (( ! BASH_SUBSHELL )); then
-	#	error "$(gettext "A failure occurred in %s().")" "$1"
-	#	plain "$(gettext "Aborting...")"
-	#fi
-	#exit $E_USER_FUNCTION_FAILED
-	echo print the error MOD2
-}
+	 first exit all subshells, then print the error
+	if (( ! BASH_SUBSHELL )); then
+		error "$(gettext "A failure occurred in %s().")" "$1"
+		plain "$(gettext "Aborting...")"
+	fi
+	exit $E_USER_FUNCTION_FAILED
+	}
 
 merge_arch_attrs() {
 	local attr supported_attrs=(
