@@ -49,3 +49,7 @@ wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 #startx
 i3conf
+
+#dwm try
+pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
+#> /dev/null 2>&1
