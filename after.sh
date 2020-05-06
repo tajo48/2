@@ -66,4 +66,6 @@ cd /home/tajo48/dwm
 makepkg -s -i -c
 cd /home/tajo48/st
 makepkg -s -i -c
+echo "exec dwm" >> ~/.xinitrc
+startx
 #> /dev/null 2>&1
