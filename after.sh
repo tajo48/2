@@ -52,18 +52,21 @@ i3conf
 
 #makepkg in root
 rm /usr/bin/makepkg
-wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
-cat makepkg > /usr/bin/makepkg
-rm /root/makepkg
+wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /home/tajo48/makepkg
+cat /home/tajo48/makepkg > /usr/bin/makepkg
+rm /home/tajo48/makepkg
 
+sleep 10s
 
 #dwm try
+mkdir /home/tajo48/setupsuckless
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz /root/dwm.tar.gr
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz /root/st.tar.gr
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz /home/tajo48/setupsuckless/dwm.tar.gr
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz /home/tajo48/setupsuckless/st.tar.gr
+cd /home/tajo48/setupsuckless
 tar -xvf dwm.tar.gz
 tar -xvf st.tar.gz
-cd /root/dwm
+cd /home/tajo48/setupsuckless/dwm
 makepkg -s
 pacman -U --noconfirm dwm.pkg.tar.xz
 #> /dev/null 2>&1
