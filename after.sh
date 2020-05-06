@@ -56,5 +56,7 @@ rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
-
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz /root/dwm.tar.gr
+tar -xzvf dwm.tar.gz
+rm /root/dwm.tar.gz
 #> /dev/null 2>&1
