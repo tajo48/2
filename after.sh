@@ -45,5 +45,10 @@ mkdir /home/tajo48/photos
 #curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg 
 wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3/config
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
-setxkbmap -layout "pl"
+#setxkbmap -layout 'pl'
+echo "Section "InputClass"
+    Identifier "system-keyboard"
+    MatchIsKeyboard "on"
+    Option "XkbLayout" "de" 
+EndSection" >>  /etc/X11/xorg.conf.d/
 #startx
