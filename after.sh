@@ -56,7 +56,5 @@ rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
-cd /usr/bin
-ls | grep makepkg
 
 #> /dev/null 2>&1
