@@ -58,5 +58,4 @@ tar -xzvf dwm.tar.gz
 tar -xzvf st.tar.gz
 cd /root/dwm
 makepkg -si
-mk
 #> /dev/null 2>&1
