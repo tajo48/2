@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils patch
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -60,11 +60,15 @@ cd /home/tajo48
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu.tar.gz
 tar -xvf dwm.tar.gz
 tar -xvf st.tar.gz
-cd /home/tajo48/dwm
+tar -xvf dmenu.tar.gz
+cd /home/tajo48/dmenu
 makepkg -s -i -c --nocheck
 cd /home/tajo48/st
+makepkg -s -i -c --nocheck
+cd /home/tajo48/dwm
 makepkg -s -i -c --nocheck
 echo "exec dwm" >> ~/.xinitrc
 startx
