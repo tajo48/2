@@ -64,12 +64,12 @@ wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu.tar.gz
 tar -xvf dwm.tar.gz
 tar -xvf st.tar.gz
 tar -xvf dmenu.tar.gz
-#cd /home/tajo48/dmenu
-#makepkg -s -i -c --nocheck
+cd /home/tajo48/dmenu
+makepkg -s -i -c --noconfirm
 cd /home/tajo48/st
-makepkg -s -i -c --nocheck
-#cd /home/tajo48/dwm
-#makepkg -s -i -c --nocheck
-#echo "exec dwm" >> ~/.xinitrc
+makepkg -s -i -c --noconfirm
+cd /home/tajo48/dwm
+makepkg -s -i -c --noconfirm
+echo "exec dwm" >> ~/.xinitrc
 startx
 #> /dev/null 2>&1
