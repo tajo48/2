@@ -2,8 +2,8 @@
 
 #programs
 pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
-pacman -S --noconfirm lightdm lightdm-webkit2-greeter
-
+#pacman -S --noconfirm lightdm lightdm-webkit2-greeter
+pacman -S --noconfirm lxdm
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -76,9 +76,7 @@ cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
 echo "makepkg -s -i -c --noconfirm"
-systemctl enable lightdm.service
-mkdir /etc/lightdm/
-sleep 5s
+systemctl enable lxdm.service
 echo greeter-session=lightdm-webkit2-greeter > /etc/lightdm/lightdm.conf
 #https://acm.cs.uic.edu/wiki/linux:lxdm_login_theming_setup
 #startx
