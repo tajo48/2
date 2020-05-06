@@ -61,6 +61,7 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 
 #dwm try
 cd /home/tajo48
+echo "exec dwm" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
@@ -73,10 +74,8 @@ makepkg -s -i -c --noconfirm
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
-makepkg -s -i -c --noconfirm
-echo "exec dwm
-sleep 10s
-exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
-exec setxkbmap -layout 'pl'" >> ~/.xinitrc
-startx
+echo "makepkg -s -i -c --noconfirm"
+#startx
+#exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+#exec setxkbmap -layout 'pl'
 #> /dev/null 2>&1
