@@ -36,6 +36,8 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+
+<<i3conf
 #i3 wm
 pacman -S --noconfirm i3-gaps feh firefox rxvt-unicode rofi neofetch termite
 echo "exec i3" >> ~/.xinitrc
@@ -47,3 +49,4 @@ wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 #setxkbmap -layout 'pl'
 #startx
+i3conf
