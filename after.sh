@@ -50,6 +50,13 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 #startx
 i3conf
 
+#makepkg in root
+rm /usr/bin/makepkg
+wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
+cat makepkg > /usr/bin/makepkg
+rm /root/makepkg
+
+
 #dwm try
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz /root/dwm.tar.gr
