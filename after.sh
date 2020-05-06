@@ -2,7 +2,8 @@
 
 #programs
 pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
-pacman -S --noconfirm lightdm lightdm-webkit2-greeter 
+pacman -S --noconfirm lightdm lightdm-webkit2-greeter
+
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
