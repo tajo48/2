@@ -57,7 +57,7 @@ cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
 
 sleep 10s
-
+<<com
 #dwm try
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
@@ -69,3 +69,4 @@ cd /home/tajo48/setupsuckless/dwm
 makepkg -s
 pacman -U --noconfirm dwm.pkg.tar.xz
 #> /dev/null 2>&1
+com
