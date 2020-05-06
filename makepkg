@@ -1172,8 +1172,8 @@ if (( LOGGING )) && ! ensure_writable_dir "LOGDEST" "$LOGDEST"; then
 fi
 if (( ! INFAKEROOT )); then
 	if (( EUID == 0 )); then
-		error "$(gettext "Running %s as root is not allowed as it can cause permanent,\n\
-catastrophic damage to your system.")" "makepkg"
+		error "$(gettext "Running %s as root is allowed but it can cause permanent,\n\
+catastrophic damage to your system MOD1.")" "makepkg"
 	fi
 else
 	if [[ -z $FAKEROOTKEY ]]; then
