@@ -53,7 +53,7 @@ i3conf
 #dwm try
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 rm /usr/bin/makepkg
-wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root
+wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
 cd /usr/bin
