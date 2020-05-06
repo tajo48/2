@@ -2,7 +2,7 @@
 
 #programs
 pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
-pacman -S --noconfirm lightdm lightdm-webkit2-greeter
+pacman -S --noconfirm dmenu
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -63,22 +63,16 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 cd /home/tajo48
 echo "exec dwm" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu.tar.gz
+git clone https://aur.archlinux.org/dwm.git
+git clone https://aur.archlinux.org/st.git
 tar -xvf dwm.tar.gz
 tar -xvf st.tar.gz
-tar -xvf dmenu.tar.gz
-cd /home/tajo48/dmenu
-makepkg -s -i -c --noconfirm
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
 makepkg -s -i -c --noconfirm
-systemctl enable lightdm.service
-echo greeter-session=lightdm-webkit2-greeter > /etc/lightdm/lightdm.conf
-#https://acm.cs.uic.edu/wiki/linux:lxdm_login_theming_setup
-#startx
+
+
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #exec setxkbmap -layout 'pl'
 #> /dev/null 2>&1
