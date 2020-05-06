@@ -65,8 +65,6 @@ echo "exec dwm" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 git clone https://git.suckless.org/dwm
 git clone https://git.suckless.org/st
-tar -xvf dwm.tar.gz
-tar -xvf st.tar.gz
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
