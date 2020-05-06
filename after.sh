@@ -56,15 +56,14 @@ wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
 
-sleep 10s
-<<com
 #dwm try
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
-cd /home/tajo48/setupsuckless
 tar -xvf dwm.tar.gz
 tar -xvf st.tar.gz
+
+<<com
 cd /home/tajo48/setupsuckless/dwm
 makepkg -s
 pacman -U --noconfirm dwm.pkg.tar.xz
