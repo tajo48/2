@@ -27,7 +27,7 @@ echo -en "root\nroot" | passwd
 sed -i '/%wheel ALL=(ALL) ALL/s/^#//g' /etc/sudoers
 systemctl enable dhcpcd
 useradd -m tajo48
-echo -en "1\n1" | passwd user
+echo -en "pass\npass" | passwd tajo48
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 
 # Install bootloader
@@ -47,13 +47,13 @@ wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 #startx
 i3conf
-
+<<com1
 #makepkg in root
 rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
-
+com1
 #dwm try
 cd /home/tajo48
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
