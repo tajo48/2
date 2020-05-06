@@ -34,6 +34,7 @@ exec --no-startup-id nm-applet
 
 #feh
 exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+setxkbmap -layout 'pl
 
 #rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
