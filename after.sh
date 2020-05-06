@@ -80,6 +80,7 @@ systemctl enable lightdm.service
 mkdir /etc/lightdm/
 sleep 5s
 echo greeter-session=lightdm-webkit2-greeter > /etc/lightdm/lightdm.conf
+#https://acm.cs.uic.edu/wiki/linux:lxdm_login_theming_setup
 #startx
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #exec setxkbmap -layout 'pl'
