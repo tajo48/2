@@ -76,8 +76,6 @@ makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
 echo "makepkg -s -i -c --noconfirm"
 systemctl enable gdm.service
-exit
-poweroff
 #startx
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #exec setxkbmap -layout 'pl'
