@@ -74,6 +74,8 @@ cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
 makepkg -s -i -c --noconfirm
-echo "exec dwm" >> ~/.xinitrc
+echo "exec dwm
+exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+exec setxkbmap -layout 'pl'" >> ~/.xinitrc
 startx
 #> /dev/null 2>&1
