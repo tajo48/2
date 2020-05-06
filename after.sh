@@ -22,14 +22,14 @@ echo "
 
 # Set root password
 echo "root pasword"
-echo -en "1\n1" | passwd
+echo -en "root\nroot" | passwd
 
 # Useradd,internet and sudo 
 sed -i '/%wheel ALL=(ALL) ALL/s/^#//g' /etc/sudoers
 systemctl enable dhcpcd
 useradd -m tajo48
 echo "user pasword"
-echo -en "1\n1" | passwd tajo48
+echo -en "pass\npass" | passwd user
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 
 # Install bootloader
