@@ -191,8 +191,7 @@ update_pkgver() {
 	msg "$(gettext "Starting %s()...")" "pkgver"
 	newpkgver=$(run_function_safe pkgver)
 	if (( $? != 0 )); then
-		echo ERROOOOOOOR KURWA
-		#error_function pkgver
+		error_function pkgver
 	fi
 	if ! check_pkgver "$newpkgver"; then
 		error "$(gettext "pkgver() generated an invalid version: %s")" "$newpkgver"
