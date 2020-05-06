@@ -67,7 +67,7 @@ git clone https://aur.archlinux.org/st.git
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
-makepkg -s -i -c --noconfirm
+#makepkg -s -i -c --noconfirm
 
 
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
