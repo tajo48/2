@@ -42,10 +42,6 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
-/*
-exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
-exec setxkbmap -layout 'pl'
-*/
 
 /* key definitions */
 #define MODKEY Mod1Mask
@@ -62,7 +58,7 @@ exec setxkbmap -layout 'pl'
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
-
+setxkbmap -layout 'pl'
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -117,3 +113,7 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
 
+/*
+exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+exec setxkbmap -layout 'pl'
+*/
