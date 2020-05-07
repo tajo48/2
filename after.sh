@@ -62,6 +62,7 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 #dwm try
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+setxkbmap -layout 'pl'
 exec dwm" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 git clone https://aur.archlinux.org/dwm.git
