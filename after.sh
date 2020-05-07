@@ -72,8 +72,9 @@ git clone https://aur.archlinux.org/st.git
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
-
-#makepkg -s -i -c --noconfirm
+rm config.h
+wget https://raw.githubusercontent.com/tajo48/2/master/config.h -O /home/tajo48/dwm/config.h
+makepkg -sic --noconfirm --skipchecksums
 #--skipchecksums
 #Do not verify checksums of source files.
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
