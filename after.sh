@@ -33,12 +33,7 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-####test2start
-git clone https://aur.archlinux.org/dwm.git
-git clone https://aur.archlinux.org/st.git
-####test2end
-
-<<test
+<<testi3
 #i3 wm
 pacman -S --noconfirm i3-gaps feh firefox rxvt-unicode rofi neofetch termite
 echo "exec i3" >> ~/.xinitrc
@@ -49,7 +44,9 @@ mkdir /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3/config
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 #startx
+testi3
 
+###DWM part
 
 #makepkg in root
 rm /usr/bin/makepkg
