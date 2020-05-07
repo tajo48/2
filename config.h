@@ -42,7 +42,8 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "[M]",      monocle },
 };
-
+exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+exec setxkbmap -layout 'pl'
 /* key definitions */
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
