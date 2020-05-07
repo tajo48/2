@@ -1,7 +1,8 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober dmenu mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
+pacman -S --noconfirm git mc vim
+#pacman -S --noconfirm grub os-prober dmenu mtools dhcpcd vim git make wget xorg-server xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -33,8 +34,12 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+####test2start
+git clone https://aur.archlinux.org/dwm.git
+git clone https://aur.archlinux.org/st.git
+####test2end
 
-<<i3conf
+<<test
 #i3 wm
 pacman -S --noconfirm i3-gaps feh firefox rxvt-unicode rofi neofetch termite
 echo "exec i3" >> ~/.xinitrc
@@ -45,7 +50,7 @@ mkdir /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3/config
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 #startx
-i3conf
+
 
 #makepkg in root
 rm /usr/bin/makepkg
@@ -67,9 +72,10 @@ git clone https://aur.archlinux.org/st.git
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
+
 #makepkg -s -i -c --noconfirm
-
-
+#--skipchecksums
+#Do not verify checksums of source files.
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #exec setxkbmap -layout 'pl'
 #> /dev/null 2>&1
