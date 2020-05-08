@@ -63,12 +63,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]  = { "rofi","-show","run", NULL };
 static const char *windowcmd[]  = { "rofi","-show","window", NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *firecmd[]  = { "firefox", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_Tab,    spawn,          {.v = dmenucmd } },	
 	{ ALTKEY,                       XK_Tab,    spawn,          {.v = windowcmd } },	
 	{ MODKEY,                       XK_s,      spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_a,      spawn,          {.v = termcmd } },
 	{ ALTKEY,                       XK_b,      togglebar,      {0} },
 	{ ALTKEY,                       XK_a,      focusstack,     {.i = +1 } },
 	{ ALTKEY,                       XK_s,      focusstack,     {.i = -1 } },
