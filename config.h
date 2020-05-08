@@ -7,11 +7,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#fc4f6f";
-static const char col_gray2[]       = "#ffd500";
-static const char col_gray3[]       = "#95ffaa";
-static const char col_gray4[]       = "#54f7f0";
-static const char col_cyan[]        = "#e399ff";
+static const char col_gray1[]       = "#2e435d";
+static const char col_gray2[]       = "#9f7287";
+static const char col_gray3[]       = "#f39da3";
+static const char col_gray4[]       = "#76b8c0";
+static const char col_cyan[]        = "#a8dcf3";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -38,9 +38,9 @@ static const int resizehints = 1;    /* 1 means respect size hints in tiled resi
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "Q",      tile },    /* first entry is default */
-	{ "W",      NULL },    /* no layout function means floating behavior */
-	{ "E",      monocle },
+	{ "T",      tile },    /* first entry is default */
+	{ "F",      NULL },    /* no layout function means floating behavior */
+	{ "M",      monocle },
 };
 
 /* key definitions */
