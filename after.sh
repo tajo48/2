@@ -73,11 +73,12 @@ makepkg -s -i -c --noconfirm
 cd /home/tajo48/rofi-dmenu
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
-#rm config.h
-#wget https://raw.githubusercontent.com/tajo48/2/master/config.h -O /home/tajo48/dwm/config.h
+rm config.h
+wget https://raw.githubusercontent.com/tajo48/2/master/config.h -O /home/tajo48/dwm/config.h
 makepkg -sic --noconfirm --skipchecksums
 #--skipchecksums
 #Do not verify checksums of source files.
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #exec setxkbmap -layout 'pl'
 #> /dev/null 2>&1
+startx
