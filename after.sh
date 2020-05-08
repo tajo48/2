@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm netctl grub os-prober mtools dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
+pacman -S --noconfirm netctl grub os-prober mtools dialog dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
