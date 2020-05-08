@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm grub os-prober dmenu mtools dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
+pacman -S --noconfirm grub os-prober mtools dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft mc fakeroot binutils patch pkgconf base-devel
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -67,7 +67,10 @@ exec dwm" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
 git clone https://aur.archlinux.org/dwm.git
 git clone https://aur.archlinux.org/st.git
+git clone https://aur.archlinux.org/rofi-dmenu.git
 cd /home/tajo48/st
+makepkg -s -i -c --noconfirm
+cd /home/tajo48/rofi-dmenu
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
 rm config.h
