@@ -15,7 +15,7 @@ wipefs /dev/sda1
 wipefs /dev/sda2
 
 # Mkfs
-mkfs.ext4 /dev/sda2
+mkfs.ext4 -q /dev/sda2
 mkswap /dev/sda1
 
 # Set up time
