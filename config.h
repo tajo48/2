@@ -63,7 +63,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[]  = { "rofi","-show","run", NULL };
 static const char *windowcmd[]  = { "rofi","-show","window", NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *firecmd[]  = { "firefox", NULL };
+static const char *firecmd[]  = { "firefox","-chrome","duckduckgo.com", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
