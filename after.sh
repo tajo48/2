@@ -66,25 +66,22 @@ cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'
 exec dwm" >> ~/.xinitrc
-pacman -S --noconfirm feh firefox rxvt-unicode rofi neofetch
+pacman -S --noconfirm feh firefox rxvt-unicode neofetch
+
+#download (almost temporary)
 git clone https://aur.archlinux.org/dwm.git
 git clone https://aur.archlinux.org/st.git
-git clone https://aur.archlinux.org/rofi-dmenu.git
+git clone https://aur.archlinux.org/dmenu.git
+
+#patch (temporary)
+
+
+#makekpkg
 cd /home/tajo48/st
 makepkg -s -i -c --noconfirm
-cd /home/tajo48/rofi-dmenu
+cd /home/tajo48/dmenu
 makepkg -s -i -c --noconfirm
 cd /home/tajo48/dwm
-rm config.h
-wget https://raw.githubusercontent.com/tajo48/2/master/config.h -O /home/tajo48/dwm/config.h
 makepkg -sic --noconfirm --skipchecksums
-#--skipchecksums
-#Do not verify checksums of source files.
-#exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
-#exec setxkbmap -layout 'pl'
-#> /dev/null 2>&1
-#https://discord.com/api/download/ptb?platform=linux&format=tar.gz
-#xrandr --output VGA1 --auto --same-as LVDS1 --mode 1024x768
-#xrandr --output LVDS1 --mode 1024x768
 
 startx
