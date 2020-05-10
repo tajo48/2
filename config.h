@@ -17,6 +17,14 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
+//gaps
+ static const char selbgcolor[]      = "#005577";
+ static const char selfgcolor[]      = "#eeeeee";
+ static const unsigned int borderpx  = 1;        /* border pixel of windows */
+ static const unsigned int gappx     = 1;        /* gap pixel between windows */
+ static const unsigned int snap      = 32;       /* snap pixel */
+ static const Bool showbar           = True;     /* False means no bar */
+ static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
