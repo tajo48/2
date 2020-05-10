@@ -84,4 +84,7 @@ makepkg -sic --noconfirm --skipchecksums
 #exec setxkbmap -layout 'pl'
 #> /dev/null 2>&1
 #https://discord.com/api/download/ptb?platform=linux&format=tar.gz
+#xrandr --output VGA1 --auto --same-as LVDS1 --mode 1024x768
+#xrandr --output LVDS1 --mode 1024x768
+
 startx
