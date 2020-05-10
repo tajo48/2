@@ -83,4 +83,5 @@ makepkg -sic --noconfirm --skipchecksums
 #exec --no-startup-id feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #exec setxkbmap -layout 'pl'
 #> /dev/null 2>&1
+#https://discord.com/api/download/ptb?platform=linux&format=tar.gz
 startx
