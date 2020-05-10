@@ -38,14 +38,13 @@ grub-mkconfig -o /boot/grub/grub.cfg
 <<testi3
 #i3 wm
 pacman -S --noconfirm i3-gaps feh firefox rxvt-unicode rofi neofetch termite
-echo "exec i3" >> ~/.xinitrc
-mkdir /root/.config
-mkdir /root/.config/i3
+echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+setxkbmap -layout 'pl'
+exec dwm" >> ~/.xinitrc
 mkdir /home/tajo48/photos
-#curl https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg 
-wget https://raw.githubusercontent.com/tajo48/2/master/config_i3 -O ~/.config/i3/config
+cd /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
-#startx
+startx
 testi3
 
 ###DWM part
