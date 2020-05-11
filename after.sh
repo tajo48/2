@@ -72,14 +72,18 @@ git clone https://aur.archlinux.org/dwm.git
 git clone https://aur.archlinux.org/st.git
 git clone https://aur.archlinux.org/dmenu.git
 
-#patch (temporary)
+#wgetpatch (temporary)
+wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
 
+#patch (temporary)
+cd /home/tajo48/dwm
+patch < dwm-fullgaps-6.2.diff
 
 #makekpkg
 cd /home/tajo48/st
-makepkg -s -i -c --noconfirm
+makepkg -s -i -c --noconfirm --skipchecksums
 cd /home/tajo48/dmenu
-makepkg -s -i -c --noconfirm
+makepkg -s -i -c --noconfirm --skipchecksums
 cd /home/tajo48/dwm
 makepkg -sic --noconfirm --skipchecksums
 
