@@ -79,7 +79,7 @@ cd /home/tajo48/dwm
 wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508-ceac8c9.diff
 wget https://dwm.suckless.org/patches/singularborders/dwm-6.0-singularborders.diff
 wget https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff
-wget https://dwm.suckless.org/patches/gaps/dwm-gaps-6.0.diff
+wget https://dwm.suckless.org/patches/vanitygaps/dwm-vanitygaps-20190508-6.2.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
@@ -88,7 +88,7 @@ clear
 #patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 #patch < dwm-6.0-singularborders.diff
 #patch < dwm-pertag-6.2.diff
-patch < dwm-gaps-6.0.diff
+patch < dwm-vanitygaps-20190508-6.2.diff
 mv config.def.h config.h
 sleep 20s
 
