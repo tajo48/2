@@ -74,6 +74,8 @@ wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu.tar.gz
 tar -xzvf dwm.tar.gz
 tar -xzvf st.tar.gz
 tar -xzvf dmenu.tar.gz
+
+<<comenttttttt
 #wgetpatch (temporary)
 cd /home/tajo48/dwm
 wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
