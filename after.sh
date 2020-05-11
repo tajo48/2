@@ -80,7 +80,14 @@ cp dwm.c dwm.c.orig
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 patch < dwm-pertag-6.2.diff
 patch < dwm-uselessgap-6.2.diff
-sleep 20s
+
+#wgetpatch (temporary)
+cd /home/tajo48/dmenu
+wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
+
+#patch (temporary)
+cd /home/tajo48/dmenu
+patch < dmenu-center-4.8.diff
 
 #cp config.h config.def.h
 #makekpkg
