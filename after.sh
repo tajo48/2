@@ -83,7 +83,7 @@ wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
-cp config.h config.def.h
+mv config.h config.def.h
 cp dwm.c dwm.c.orig
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 patch < dwm-pertag-6.2.diff
