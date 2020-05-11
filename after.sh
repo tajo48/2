@@ -58,10 +58,6 @@ rm /root/makepkg
 chmod +x /usr/bin/makepkg
 comform
 
-# Copy post-install system cinfiguration script to new /root
-    wget https://raw.githubusercontent.com/tajo48/2/master/after2.sh -O after2.sh
-    chmod +x after2.sh
-
-# Chroot into new system
+#Bash script go brrrrr
 sleep 20s
 ./after2.sh
