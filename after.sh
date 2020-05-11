@@ -82,7 +82,6 @@ wget https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff
 wget https://dwm.suckless.org/patches/gaps/dwm-gaps-6.0.diff
 
 #patch (temporary)
-clean
 cd /home/tajo48/dwm
 mv config.h config.def.h
 clean
