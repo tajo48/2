@@ -84,9 +84,16 @@ wget https://dwm.suckless.org/patches/gaps/dwm-gaps-6.0.diff
 #patch (temporary)
 cd /home/tajo48/dwm
 mv config.h config.def.h
+clean
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
+sleep 5s
+clean
 patch < dwm-6.0-singularborders.diff
+sleep 5s
+clean
 patch < dwm-pertag-6.2.diff
+sleep 5s
+clean
 patch < dwm-gaps-6.0.diff
 mv config.def.h config.h
 
