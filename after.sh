@@ -56,4 +56,12 @@ wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
 chmod +x /usr/bin/makepkg
-comformk
+comform
+
+# Copy post-install system cinfiguration script to new /root
+    wget https://raw.githubusercontent.com/tajo48/2/master/after2.sh -O /root/after2.sh
+    chmod +x /mnt/root/after2.sh
+
+# Chroot into new system
+sleep 20s
+/root/after.sh
