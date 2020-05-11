@@ -81,7 +81,7 @@ wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508
 #patch (temporary)
 cd /home/tajo48/dwm
 mv config.h config.def.h
-patch < dwm-fullgaps-6.2.diff
+patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 mv config.def.h config.h
 
 #makekpkg
