@@ -81,9 +81,9 @@ patch < dwm-fullgaps-6.2.diff
 
 #makekpkg
 cd /home/tajo48/st
-makepkg -s -i -c --noconfirm --skipchecksums
+makepkg -sic --noconfirm --skipchecksums
 cd /home/tajo48/dmenu
-makepkg -s -i -c --noconfirm --skipchecksums
+makepkg -sic --noconfirm --skipchecksums
 cd /home/tajo48/dwm
 makepkg -sic --noconfirm --skipchecksums
 
