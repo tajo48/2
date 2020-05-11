@@ -94,6 +94,7 @@ mv config.def.h config.h
 lol
 cp dwm.c dwm.c.orig
 cp config.h config.def.h
+patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 sleep 20s
 
 <koniec
