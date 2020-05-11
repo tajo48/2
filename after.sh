@@ -74,16 +74,19 @@ git clone https://git.suckless.org/dwm/
 git clone https://git.suckless.org/st/
 git clone https://git.suckless.org/dmenu/
 
+<<com
 #wgetpatch (temporary)
 cd /home/tajo48/dwm
 wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
+
 
 #patch (temporary)
 cd /home/tajo48/dwm
 mv config.h config.def.h
 patch < dwm-fullgaps-6.2.diff
 mv config.def.h config.h
-<<com
+com
+
 #makekpkg
 cd /home/tajo48/st
 make clean install
