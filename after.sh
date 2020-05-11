@@ -73,6 +73,7 @@ wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508
 wget https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff
 wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
+https://dwm.suckless.org/patches/defaulttransparency/dwm-defaulttransparency-r1521.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
@@ -82,7 +83,7 @@ patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 patch < dwm-pertag-6.2.diff
 patch < dwm-uselessgap-6.2.diff
 patch < dwm-movestack-6.1.diff
-
+patch < dwm-defaulttransparency-r1521.diff
 #wgetpatch (temporary)
 cd /home/tajo48/dmenu
 wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
