@@ -42,6 +42,8 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Copy post-install system cinfiguration script to new /root
     wget https://raw.githubusercontent.com/tajo48/2/master/after.sh -O /mnt/root/after.sh
     chmod +x /mnt/root/after.sh
+    wget https://raw.githubusercontent.com/tajo48/2/master/after2.sh -O /mnt/root/after2.sh
+    chmod +x /mnt/root/after2.sh
 
 # Chroot into new system
 arch-chroot /mnt /root/after.sh
