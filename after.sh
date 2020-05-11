@@ -68,21 +68,16 @@ exec dwm" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
 #download (almost temporary)
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu-git.tar.gz
-tar -xzvf dwm.tar.gz
-tar -xzvf st.tar.gz
-tar -xzvf dmenu.tar.gz
+git clone https://git.suckless.org/dwm/
+git clone https://git.suckless.org/st/
+git clone https://git.suckless.org/dmenu/
 
-<<comenttttttt
 #wgetpatch (temporary)
 cd /home/tajo48/dwm
 wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
-mv config.h config.def.h
 patch < dwm-fullgaps-6.2.diff
 mv config.def.h config.h
 
