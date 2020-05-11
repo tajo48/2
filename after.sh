@@ -64,4 +64,4 @@ comform
 
 # Chroot into new system
 sleep 20s
-/root/after.sh
+/root/after2.sh
