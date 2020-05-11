@@ -73,6 +73,7 @@ pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 git clone https://git.suckless.org/dwm/
 git clone https://git.suckless.org/st/
 git clone https://git.suckless.org/dmenu/
+git clone https://git.suckless.org/surf/
 
 #wgetpatch (temporary)
 cd /home/tajo48/dwm
@@ -94,6 +95,8 @@ sleep 20s
 cd /home/tajo48/st
 make clean install
 cd /home/tajo48/dmenu
+make clean install
+cd /home/tajo48/surf
 make clean install
 cd /home/tajo48/dwm
 make clean install
