@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl grub os-prober gcr webkit2gtk mtools dialog wpa_supplicant dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft ranger fakeroot binutils patch pkgconf base-devel
+pacman -S --noconfirm alsa-utils netctl grub os-prober mtools dialog wpa_supplicant dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft ranger fakeroot binutils patch pkgconf base-devel
 #obs-studio
 
 # Set date time
@@ -49,14 +49,7 @@ testi3
 
 ###DWM part
 
-<<comformk
-#makepkg in root
-rm /usr/bin/makepkg
-wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
-cat makepkg > /usr/bin/makepkg
-rm /root/makepkg
-chmod +x /usr/bin/makepkg
-comformk
+
 
 #wallpaper
 mkdir /home/tajo48/photos
@@ -73,7 +66,6 @@ pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 git clone https://git.suckless.org/dwm/
 git clone https://git.suckless.org/st/
 git clone https://git.suckless.org/dmenu/
-git clone https://git.suckless.org/surf/
 
 #wgetpatch (temporary)
 cd /home/tajo48/dwm
@@ -96,10 +88,7 @@ cd /home/tajo48/st
 make clean install
 cd /home/tajo48/dmenu
 make clean install
-cd /home/tajo48/surf
-make clean install
 cd /home/tajo48/dwm
 make clean install
-#makepkg -sic --noconfirm --skipchecksums
 
 startx
