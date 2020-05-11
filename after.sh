@@ -49,12 +49,14 @@ testi3
 
 ###DWM part
 
+<<comformk
 #makepkg in root
 rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/2/master/makepkg /root/makepkg
 cat makepkg > /usr/bin/makepkg
 rm /root/makepkg
 chmod +x /usr/bin/makepkg
+comformk
 
 #wallpaper
 mkdir /home/tajo48/photos
@@ -83,10 +85,11 @@ mv config.def.h config.h
 
 #makekpkg
 cd /home/tajo48/st
-makepkg -sic --noconfirm --skipchecksums
+make clean install
 cd /home/tajo48/dmenu
-makepkg -sic --noconfirm --skipchecksums
+make clean install
 cd /home/tajo48/dwm
-makepkg -sic --noconfirm --skipchecksums
+make clean install
+#makepkg -sic --noconfirm --skipchecksums
 
 startx
