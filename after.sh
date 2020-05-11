@@ -70,7 +70,7 @@ pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 #download (almost temporary)
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/dwm.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/st.tar.gz
-wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu.tar.gz
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/dmenu-git.tar.gz
 tar -xzvf dwm.tar.gz
 tar -xzvf st.tar.gz
 tar -xzvf dmenu.tar.gz
