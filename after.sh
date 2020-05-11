@@ -82,7 +82,7 @@ wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
 cd /home/tajo48/dwm
 patch < dwm-fullgaps-6.2.diff
 mv config.def.h config.h
-
+<<com
 #makekpkg
 cd /home/tajo48/st
 make clean install
