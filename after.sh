@@ -84,7 +84,7 @@ wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
-<<lol
+<<commmm
 cp dwm.c dwm.c.orig
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 cp config.h config.def.h
@@ -97,7 +97,7 @@ cp config.h config.def.h
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 sleep 20s
 
-<koniec
+<<commds
 #makekpkg
 cd /home/tajo48/st
 make clean install
