@@ -58,7 +58,6 @@ rm /root/makepkg
 chmod +x /usr/bin/makepkg
 comformk
 
-
 #wallpaper
 mkdir /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
@@ -84,20 +83,16 @@ wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
-<<comm
+
 cp dwm.c dwm.c.orig
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 cp config.h config.def.h
 patch < dwm-pertag-6.2.diff
 patch < dwm-uselessgap-6.2.diff
-mv config.def.h config.h
-comm
-cp dwm.c dwm.c.orig
-cp config.h config.def.h
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 sleep 20s
 
-<<commds
+
 #makekpkg
 cd /home/tajo48/st
 make clean install
