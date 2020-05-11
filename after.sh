@@ -73,6 +73,7 @@ git clone https://aur.archlinux.org/st.git
 git clone https://aur.archlinux.org/dmenu.git
 
 #wgetpatch (temporary)
+cd /home/tajo48/dwm
 wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
 
 #patch (temporary)
