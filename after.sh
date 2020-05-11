@@ -85,9 +85,9 @@ wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 cd /home/tajo48/dwm
 mv config.h config.def.h
 clear
-#patch < dwm-fakefullscreen-20170508-ceac8c9.diff
-#patch < dwm-6.0-singularborders.diff
-#patch < dwm-pertag-6.2.diff
+patch < dwm-fakefullscreen-20170508-ceac8c9.diff
+patch < dwm-6.0-singularborders.diff
+patch < dwm-pertag-6.2.diff
 patch < dwm-uselessgap-6.2.diff
 mv config.def.h config.h
 sleep 20s
