@@ -78,9 +78,9 @@ wget https://dwm.suckless.org/patches/fullgaps/dwm-fullgaps-6.2.diff
 
 #patch (temporary)
 cd /home/tajo48/dwm
-mv config.h config.dev.h
+mv config.h config.def.h
 patch < dwm-fullgaps-6.2.diff
-mv config.dev.h config.h
+mv config.def.h config.h
 
 #makekpkg
 cd /home/tajo48/st
