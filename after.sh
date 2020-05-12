@@ -67,6 +67,8 @@ git clone https://git.suckless.org/dwm/
 git clone https://git.suckless.org/st/
 git clone https://git.suckless.org/dmenu/
 
+###DWM
+
 #wgetpatch (temporary)
 cd /home/tajo48/dwm
 wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508-ceac8c9.diff
@@ -75,28 +77,32 @@ wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
 
 #patch (temporary)
-cd /home/tajo48/dwm
 cp dwm.c dwm.c.orig
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 patch < dwm-pertag-6.2.diff
 patch < dwm-uselessgap-6.2.diff
 patch < dwm-movestack-6.1.diff
 
+###DMENU
+
 #wgetpatch (temporary)
 cd /home/tajo48/dmenu
 wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
 
 #patch (temporary)
-cd /home/tajo48/dmenu
 patch < dmenu-center-4.8.diff
+
+###ST
 
 #wgetpatch (temporary)
 cd /home/tajo48/st
 wget https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
 
 #patch (temporary)
-cd /home/tajo48/st
 patch < st-alpha-0.8.2.diff
+sleep 10s
+
+###MKPKG
 
 #cp config.h config.def.h
 #makekpkg
@@ -107,4 +113,4 @@ make clean install
 cd /home/tajo48/dwm
 make clean install
 
-#startx
+startx
