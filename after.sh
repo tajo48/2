@@ -41,3 +41,5 @@ pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings l
 echo "greeter-session=lightdm-webkit2-greeter" >> /etc/lightdm/lightdm.conf
 systemctl enable lightdm -f
 
+xmonad --recompile
+
