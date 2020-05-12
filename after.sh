@@ -34,3 +34,8 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 # Install bootloader
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
+
+pacman -S --noconfirm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter
+echo "greeter-session=example-gtk-gnome" >> /etc/lightdm/lightdm.conf
+systemctl enable lightdm -f
+
