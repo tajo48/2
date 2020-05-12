@@ -64,8 +64,8 @@ pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
 #download (almost temporary)
 git clone https://git.suckless.org/dwm/
-wget https://dl.suckless.org/st/st-0.8.3.tar.gz
-tar -xvjf st-0.8.3.tar.gz
+wget https://dl.suckless.org/st/st-0.8.2.tar.gz
+tar -xvzf st-0.8.3.tar.gz
 git clone https://git.suckless.org/dmenu/
 
 ###DWM
@@ -96,7 +96,7 @@ patch < dmenu-center-4.8.diff
 ###ST
 
 #wgetpatch (temporary)
-cd /home/tajo48/st
+cd /home/tajo48/st-0.8.2
 wget https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
 
 #patch (temporary)
