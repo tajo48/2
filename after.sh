@@ -65,7 +65,7 @@ pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 #download (almost temporary)
 git clone https://git.suckless.org/dwm/
 wget https://dl.suckless.org/st/st-0.8.2.tar.gz
-tar -xvzf st-0.8.3.tar.gz
+tar -xvzf st-0.8.2.tar.gz
 git clone https://git.suckless.org/dmenu/
 
 ###DWM
