@@ -101,4 +101,4 @@ make clean install
 cd /home/tajo48/dwm
 make clean install
 
-startx
+#startx
