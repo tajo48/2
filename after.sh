@@ -45,7 +45,6 @@ mkdir /home/tajo48/photos
 cd /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 startx
-testi3
 
 ###DWM part
 
@@ -64,8 +63,7 @@ pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
 #download (almost temporary)
 git clone https://git.suckless.org/dwm/
-wget https://dl.suckless.org/st/st-0.8.2.tar.gz
-tar -xvzf st-0.8.2.tar.gz
+git clone https://git.suckless.org/st/
 git clone https://git.suckless.org/dmenu/
 
 ###DWM
@@ -93,21 +91,11 @@ wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
 #patch (temporary)
 patch < dmenu-center-4.8.diff
 
-###ST
-
-#wgetpatch (temporary)
-cd /home/tajo48/st-0.8.2
-wget https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
-
-#patch (temporary)
-patch < st-alpha-0.8.2.diff
-sleep 10s
-
 ###MKPKG
 
 #cp config.h config.def.h
 #makekpkg
-cd /home/tajo48/st-0.8.2
+cd /home/tajo48/st
 make clean install
 cd /home/tajo48/dmenu
 make clean install
