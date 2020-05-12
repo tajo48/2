@@ -107,7 +107,7 @@ sleep 10s
 
 #cp config.h config.def.h
 #makekpkg
-cd /home/tajo48/st
+cd /home/tajo48/st-0.8.2
 make clean install
 cd /home/tajo48/dmenu
 make clean install
