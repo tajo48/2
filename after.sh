@@ -35,7 +35,7 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-
+<<xmonadtest
 #XMONAD TRY
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter xmonad
 echo "greeter-session=lightdm-webkit2-greeter" >> /etc/lightdm/lightdm.conf
@@ -43,3 +43,52 @@ systemctl enable lightdm -f
 
 xmonad --recompile
 
+xmonadtest
+
+###DWM part
+#wallpaper
+mkdir /home/tajo48/photos
+wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
+#dwm try
+cd /home/tajo48
+echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+setxkbmap -layout 'pl'
+exec dwm" >> ~/.xinitrc
+pacman -S --noconfirm feh firefox rxvt-unicode neofetch
+#download (almost temporary)
+git clone https://git.suckless.org/dwm/
+git clone https://git.suckless.org/st/
+git clone https://git.suckless.org/dmenu/
+###DWM
+
+#wgetpatch (temporary)
+cd /home/tajo48/dwm
+wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508-ceac8c9.diff
+wget https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff
+wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
+wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
+
+#patch (temporary)
+cp dwm.c dwm.c.orig
+patch < dwm-fakefullscreen-20170508-ceac8c9.diff
+patch < dwm-pertag-6.2.diff
+patch < dwm-uselessgap-6.2.diff
+patch < dwm-movestack-6.1.diff
+
+###DMENU
+#wgetpatch (temporary)
+cd /home/tajo48/dmenu
+wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
+wget https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff
+
+#patch (temporary)
+patch < dmenu-center-4.8.diff
+patch < dmenu-border-4.9.diff
+#makekpkg
+cd /home/tajo48/st
+make clean install
+cd /home/tajo48/dmenu
+make clean install
+cd /home/tajo48/dwm
+make clean install
+startx
