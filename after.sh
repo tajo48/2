@@ -44,11 +44,10 @@ systemctl enable lightdm -f
 xmonad --recompile
 
 xmonadtest
-
-pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greeter xmonad
+#lightdm-gtk-greeter
+pacman -S --noconfirm lightdm lightdm-gtk-greeter-settings lightdm-webkit2-greeter
 echo "greeter-session=lightdm-webkit2-greeter" >> /etc/lightdm/lightdm.conf
 systemctl enable lightdm -f
-systemctl start lightdm -f
 
 ###DWM part
 #wallpaper
