@@ -96,5 +96,6 @@ make clean install
 #cd /home/tajo48/dwm
 #make clean install
 
+cd
 cat .xprofile
 ### Alacritty
