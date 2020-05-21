@@ -95,7 +95,8 @@ cd /home/tajo48/dmenu
 make clean install
 #cd /home/tajo48/dwm
 #make clean install
-startx
 
+#Start
+systemctl start lightdm -f
 
 ### Alacritty
