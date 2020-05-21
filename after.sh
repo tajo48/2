@@ -55,6 +55,7 @@ echo "
 
 feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'" >> ~/.xprofile
+#xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
 #download (almost temporary)
