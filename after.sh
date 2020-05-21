@@ -36,12 +36,12 @@ grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #XMONAD TRY
-pacman -S --noconfirm xmonad
+pacman -S --noconfirm xmonad gnome gnome-extra
 
 #xmonad --recompile
 
 #lightdm-gtk-greeter
-pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greete
+pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greete 
 echo "greeter-session=lightdm-webkit2-greeter" >> /etc/lightdm/lightdm.conf
 systemctl enable lightdm -f
 
