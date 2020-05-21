@@ -39,8 +39,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 pacman -S --noconfirm xmonad gnome gnome-extra
 
 #lightdm-gtk-greeter
-pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings lightdm-webkit2-greete 
-echo "greeter-session=lightdm-webkit2-greeter" >> /etc/lightdm/lightdm.conf
+pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 systemctl enable lightdm -f
 
 ###SUCKLESS part
@@ -52,8 +51,7 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 #dwm try
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
-setxkbmap -layout 'pl'
-exec dwm" >> ~/.xinitrc
+setxkbmap -layout 'pl'" >> ~/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
 #download (almost temporary)
@@ -94,7 +92,5 @@ make clean install
 #cd /home/tajo48/dwm
 #make clean install
 
-#Start
-systemctl start lightdm -f
 
 ### Alacritty
