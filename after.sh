@@ -50,7 +50,10 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 
 #dwm try
 cd /home/tajo48
-echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+echo "
+#! /bin/bash
+
+feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'" >> ~/.xprofile
 pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
@@ -92,5 +95,5 @@ make clean install
 #cd /home/tajo48/dwm
 #make clean install
 
-
+cat .xprofile
 ### Alacritty
