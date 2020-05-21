@@ -50,12 +50,9 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 
 #dwm try
 cd /home/tajo48
-echo "
-#! /bin/bash
-
-feh --bg-fill /home/tajo48/photos/wallpaper.jpg
-setxkbmap -layout 'pl'" >> ~/.xprofile
-#xinitrc
+#echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+#setxkbmap -layout 'pl'" >> ~/.xprofile
+#replace with ~/.xmonad
 pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
 #download (almost temporary)
