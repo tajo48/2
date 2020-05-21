@@ -42,56 +42,39 @@ pacman -S --noconfirm xmonad gnome gnome-extra
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 systemctl enable lightdm -f
 
-###SUCKLESS part
+mkdir /home/tajo48/suckless
+mkdir /home/tajo48/suckless/photos
+wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/suckless/wallpaper.jpg
 
-#wallpaper
-mkdir /home/tajo48/photos
-wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
-
-#dwm try
-cd /home/tajo48
+#SUDO
+sed -i '/%wheel ALL=(ALL) ALL/s/^#//g' /etc/sudoers
 #echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #setxkbmap -layout 'pl'" >> ~/.xprofile
 #replace with ~/.xmonad
 pacman -S --noconfirm feh firefox rxvt-unicode neofetch
 
-#download (almost temporary)
-#git clone https://git.suckless.org/dwm/
+#download 
+cd /home/tajo48/suckless
 git clone https://git.suckless.org/st/
 git clone https://git.suckless.org/dmenu/
-###DWM
 
 #wgetpatch (temporary)
-#cd /home/tajo48/dwm
-#wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508-ceac8c9.diff
-#wget https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff
-#wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
-#wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
-
-#patch (temporary)
-#cp dwm.c dwm.c.orig
-#patch < dwm-fakefullscreen-20170508-ceac8c9.diff
-#patch < dwm-pertag-6.2.diff
-#patch < dwm-uselessgap-6.2.diff
-#patch < dwm-movestack-6.1.diff
-
-###DMENU
-#wgetpatch (temporary)
-cd /home/tajo48/dmenu
+cd /home/tajo48/suckless/dmenu
 wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
 wget https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff
 
 #patch (temporary)
 patch < dmenu-center-4.8.diff
 patch < dmenu-border-4.9.diff
+sed -i "static unsigned int lines      = 0;s/.*/static unsigned int lines      = 20;/" /home/tajo48/suckless/dmenu/config.def.h
+cat /home/tajo48/suckless/dmenu/config.def.h
+read -p "Press enter to continue"
 
 #makekpkg
-cd /home/tajo48/st
+cd /home/tajo48/suckless/st
 make clean install
-cd /home/tajo48/dmenu
+cd /home/tajo48/suckless/dmenu
 make clean install
-#cd /home/tajo48/dwm
-#make clean install
 
 cd
 cat .xprofile
