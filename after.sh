@@ -66,9 +66,7 @@ wget https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff
 #patch (temporary)
 patch < dmenu-center-4.8.diff
 patch < dmenu-border-4.9.diff
-sed -i '/static unsigned int lines/ s/0/1/' /home/tajo48/suckless/dmenu/config.def.h
-cat /home/tajo48/suckless/dmenu/config.def.h
-read -p "Press enter to continue"
+sed -i '/static unsigned int lines/ s/0/20/' /home/tajo48/suckless/dmenu/config.def.h
 
 #makekpkg
 cd /home/tajo48/suckless/st
