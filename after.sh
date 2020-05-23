@@ -31,7 +31,7 @@ systemctl enable dhcpcd
 useradd -m tajo48
 echo -en "root\nroot" | passwd tajo48
 usermod -aG wheel,audio,video,optical,storage,users tajo48
-sed -i '/%wheel ALL=(ALL) ALL NOPASSWD: ALL/s/^#//g' /etc/sudoers
+sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 
 # Install bootloader
 grub-install /dev/sda
