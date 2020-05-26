@@ -2,7 +2,7 @@
 
 #programs
 pacman -S --noconfirm alsa-utils netctl grub os-prober mtools dialog wpa_supplicant dhcpcd vim git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft ranger fakeroot binutils patch pkgconf base-devel htop
-#pacman -S --noconfirm neofetch obs-studio blender 
+#pacman -S --noconfirm neofetch obs-studio blender bashtop
 #pacman -S --noconfirm gnome gnome-extra
 
 
