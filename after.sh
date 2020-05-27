@@ -37,6 +37,13 @@ sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
+#makepkg in root
+rm /usr/bin/makepkg
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg /root/makepkg
+cat makepkg > /usr/bin/makepkg
+rm /root/makepkg
+chmod +x /usr/bin/makepkg
+
 #Xmonad
 pacman -S --noconfirm xmonad feh firefox termite
 
@@ -58,7 +65,7 @@ patch < dmenu-center-4.8.diff
 patch < dmenu-border-4.9.diff
 sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/suckless/dmenu/config.def.h
 
-#makekpkg
+#make clean install
 cd /home/tajo48/suckless/dmenu
 make clean install
 
