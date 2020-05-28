@@ -53,7 +53,7 @@ systemctl enable lightdm -f
 
 mkdir /home/tajo48/suckless
 mkdir /home/tajo48/suckless/photos
-wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/suckless/wallpaper.jpg
+wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/suckless/photos/wallpaper.jpg
 
 #dmenu
 cd /home/tajo48/suckless
