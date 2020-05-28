@@ -45,7 +45,7 @@ rm /root/makepkg
 chmod +x /usr/bin/makepkg
 
 #Xmonad
-pacman -S --noconfirm xmonad feh firefox termite
+pacman -S --noconfirm xmonad feh brave termite
 
 #lightdm-gtk-greeter
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
