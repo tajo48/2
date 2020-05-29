@@ -59,10 +59,9 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 #yay 
 cd /home/tajo48/suckless
 git clone https://aur.archlinux.org/yay-git.git
-cd yay-git
-makepkg -si
-
-sleep 20s
+chown -R tecmint:tecmint /yay-git
+cd /home/tajo48/suckless/yay-git
+makepkg -sic
 
 #dmenu
 cd /home/tajo48/suckless
