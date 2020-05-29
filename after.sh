@@ -60,10 +60,13 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 cd /home/tajo48/suckless
 git clone https://aur.archlinux.org/yay-git.git
 cd /home/tajo48/suckless/yay-git
-
-read -p "Press enter to continue"
 makepkg -s -i -c --noconfirm
-read -p "Press enter to continue"
+
+#polybar
+cd /home/tajo48/suckless
+git clone https://aur.archlinux.org/polybar.git
+cd /home/tajo48/suckless/polybar
+makepkg -s -i -c --noconfirm
 
 #dmenu
 cd /home/tajo48/suckless
