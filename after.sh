@@ -60,7 +60,10 @@ wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/ta
 cd /home/tajo48/suckless
 git clone https://aur.archlinux.org/yay-git.git
 cd /home/tajo48/suckless/yay-git
-makepkg -sic --noconfirm
+
+read -p "Press enter to continue"
+makepkg -s -i -c --noconfirm
+read -p "Press enter to continue"
 
 #dmenu
 cd /home/tajo48/suckless
