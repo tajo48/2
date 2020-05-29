@@ -56,6 +56,14 @@ mkdir /home/tajo48/suckless
 mkdir /home/tajo48/suckless/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/suckless/photos/wallpaper.jpg
 
+#yay 
+cd /home/tajo48/suckless
+git clone https://aur.archlinux.org/yay-git.git
+cd yay-git
+makepkg -si
+
+sleep 20s
+
 #dmenu
 cd /home/tajo48/suckless
 git clone https://git.suckless.org/dmenu/
