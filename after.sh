@@ -45,7 +45,7 @@ rm /root/makepkg
 chmod +x /usr/bin/makepkg
 
 #Xmonad
-pacman -S --noconfirm xmonad firefox feh termite
+pacman -S --noconfirm xmonad xmobar firefox feh termite
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #lightdm-gtk-greeter
