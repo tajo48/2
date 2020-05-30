@@ -40,9 +40,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 clear
 #makepkg in root
 rm /usr/bin/makepkg
-wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg /mnt/makepkg
-cat makepkg > /usr/bin/makepkg
-rm makepkg
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg -O /usr/bin/makepkg
 chmod +x /usr/bin/makepkg
 
 #Xmonad
@@ -51,10 +49,8 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 
 clear
 #xmonad config
-wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /mnt/xmonad.hs
 mkdir ~/.xmonad
-cat xmonad.hs > ~/.xmonad/xmonad.hs
-rm xmonad.hs
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O ~/.xmonad/xmonad.hs
 read -p "Press enter to continue"
 
 
