@@ -62,13 +62,6 @@ git clone https://aur.archlinux.org/yay-git.git
 cd /home/tajo48/suckless/yay-git
 makepkg -s -i -c --noconfirm
 
-#polybar
-cd /home/tajo48/suckless
-git clone https://aur.archlinux.org/polybar.git
-cd /home/tajo48/suckless/polybar
-make userconfig
-makepkg -s -i -c --noconfirm
-
 #dmenu
 cd /home/tajo48/suckless
 git clone https://git.suckless.org/dmenu/
