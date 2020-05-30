@@ -50,7 +50,7 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 clear
 #xmonad config
 mkdir ~/.xmonad
-wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O ~/.xmonad/xmonad.hs
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O ~/.xmonad/xmonad1.hs
 read -p "Press enter to continue"
 
 
