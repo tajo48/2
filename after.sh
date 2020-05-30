@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/m
 chmod +x /usr/bin/makepkg
 
 #Xmonad
-pacman -S --noconfirm xmobar xmoand xmonad-contrib firefox feh termite
+pacman -S --noconfirm xmobar xmonad xmonad-contrib firefox feh termite
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #xmonad config
