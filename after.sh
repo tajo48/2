@@ -49,7 +49,7 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #xmonad config
-wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /root/makepkg
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /root/xmonad.hs
 mv xmonad.hs > ~/.xmonad/xmonad.hs
 
 
