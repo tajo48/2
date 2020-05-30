@@ -66,6 +66,7 @@ makepkg -s -i -c --noconfirm
 cd /home/tajo48/suckless
 git clone https://aur.archlinux.org/polybar.git
 cd /home/tajo48/suckless/polybar
+make userconfig
 makepkg -s -i -c --noconfirm
 
 #dmenu
