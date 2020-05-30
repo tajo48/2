@@ -49,7 +49,6 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 #xmonad config
 mkdir /home/tajo48/.xmonad
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
-read -p "press enter"
 
 #lightdm-gtk-greeter
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
