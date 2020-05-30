@@ -42,9 +42,8 @@ clear
 rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg /mnt/makepkg
 cat makepkg > /usr/bin/makepkg
-rm /mnt/makepkg
+rm makepkg
 chmod +x /usr/bin/makepkg
-read -p "Press enter to continue"
 
 #Xmonad
 pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
@@ -55,6 +54,7 @@ clear
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /mnt/xmonad.hs
 mkdir ~/.xmonad
 cat xmonad.hs > ~/.xmonad/xmonad.hs
+rm xmonad.hs
 read -p "Press enter to continue"
 
 
