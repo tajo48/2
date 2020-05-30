@@ -51,8 +51,6 @@ clear
 #xmonad config
 mkdir ~/.xmonad
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O ~/.xmonad/xmonad1.hs
-read -p "Press enter to continue"
-
 
 #lightdm-gtk-greeter
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
