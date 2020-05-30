@@ -37,7 +37,6 @@ sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
-clear
 #makepkg in root
 rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg -O /usr/bin/makepkg
@@ -48,7 +47,6 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #xmonad config
-clear
 mkdir /home/tajo48/.xmonad
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
 read -p "press enter"
