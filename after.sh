@@ -40,8 +40,8 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #makepkg in root
 rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg /root/makepkg
-mv makepkg > /usr/bin/makepkg
-
+cat makepkg > /usr/bin/makepkg
+rm /root/makepkg
 chmod +x /usr/bin/makepkg
 
 #Xmonad
@@ -50,7 +50,8 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 
 #xmonad config
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /root/xmonad.hs
-mv xmonad.hs > ~/.xmonad/xmonad.hs
+cat xmonad.hs > ~/.xmonad/xmonad.hs
+rm /root/xmonad.hs
 
 
 #lightdm-gtk-greeter
