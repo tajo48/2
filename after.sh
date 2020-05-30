@@ -40,13 +40,18 @@ grub-mkconfig -o /boot/grub/grub.cfg
 #makepkg in root
 rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/makepkg /root/makepkg
-cat makepkg > /usr/bin/makepkg
-rm /root/makepkg
+mv makepkg > /usr/bin/makepkg
+
 chmod +x /usr/bin/makepkg
 
 #Xmonad
 pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
+
+#xmonad config
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /root/makepkg
+mv xmonad.hs > ~/.xmonad/xmonad.hs
+
 
 #lightdm-gtk-greeter
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
