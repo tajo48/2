@@ -50,6 +50,7 @@ pacman -S --noconfirm xmonad xmobar xmonad-contrib firefox feh termite
 
 #xmonad config
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs /root/xmonad.hs
+mkdir ~/.xmonad
 cat xmonad.hs > ~/.xmonad/xmonad.hs
 rm /root/xmonad.hs
 
