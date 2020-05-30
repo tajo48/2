@@ -52,7 +52,7 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/x
 
 #lightdm-gtk-greeter
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-systemctl enable lightdm -f
+#systemctl enable lightdm -f
 
 mkdir /home/tajo48/suckless
 mkdir /home/tajo48/suckless/photos
