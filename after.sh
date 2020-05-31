@@ -51,8 +51,12 @@ mkdir /home/tajo48/.xmonad
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad1.hs
 
 #lightdm-gtk-greeter
-pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-systemctl enable lightdm -f
+#pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+#systemctl enable lightdm -f
+
+#GDM
+pacman -S --noconfirm gdm
+systemctl enable gdm
 
 mkdir /home/tajo48/suckless
 mkdir /home/tajo48/suckless/photos
