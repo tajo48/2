@@ -47,8 +47,8 @@ chmod +x /usr/bin/makepkg
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #xmonad config
-mkdir /home/tajo48/.xmonad
-wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
+#mkdir /home/tajo48/.xmonad
+#wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
 
 #lightdm-gtk-greeter
 #pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
