@@ -54,7 +54,7 @@ systemctl enable lightdm -f
 #wallpaper
 mkdir /home/tajo48/suckless
 mkdir /home/tajo48/suckless/photos
-wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/suckless/photos/wallpaper.jpg
+wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper.jpg -O /home/tajo48/suckless/photos/wallpaper.jpg
 
 #yay 
 cd /home/tajo48/suckless
@@ -77,7 +77,7 @@ cd /home/tajo48/suckless/dmenu
 make clean install
 
 #xmonad config
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/build -O /root/.xmonad/build
+wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/build -O /root/.xmonad/build
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
 xmonad --recomile
 
