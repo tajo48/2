@@ -3,7 +3,7 @@
 #programs
 pacman -S --noconfirm alsa-utils netctl grub os-prober mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft fakeroot binutils patch pkgconf base-devel htop
 #pacman -S --noconfirm neofetch obs-studio blender bashtop
-pacman -S --noconfirm gnome gnome-extra termite
+#pacman -S --noconfirm gnome gnome-extra
 
 
 # Set date time
