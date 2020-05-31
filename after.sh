@@ -76,10 +76,9 @@ sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/suckless/dmenu/config.
 cd /home/tajo48/suckless/dmenu
 make clean install
 
-#xmonad config
-#wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/build -O /root/.xmonad/build
-#wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
-#xmonad --recomile
+su -l tajo48
+ls
+#wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O ~/.xmonad/xmonad.hs
 
 #echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #setxkbmap -layout 'pl'" >> ~/.xprofile
