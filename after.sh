@@ -54,6 +54,7 @@ pacman -S --noconfirm xmobar firefox feh termite xmonad xmonad-contrib conky
 pacman -S --noconfirm gdm
 systemctl enable gdm
 
+#wallpaper
 mkdir /home/tajo48/suckless
 mkdir /home/tajo48/suckless/photos
 wget https://raw.githubusercontent.com/tajo48/2/master/wallpaper.jpg -O /home/tajo48/suckless/photos/wallpaper.jpg
@@ -78,16 +79,10 @@ sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/suckless/dmenu/config.
 cd /home/tajo48/suckless/dmenu
 make clean install
 
-echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
-setxkbmap -layout 'pl'
-exec dwm" >> /home/tajo48/.xinitrc
-
-xmonad
-startx
-
 #xmonad config
-#mkdir /home/tajo48/.xmonad
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /root/.xmonad/build
 wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
+xmonad --recomile
 
 #echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #setxkbmap -layout 'pl'" >> ~/.xprofile
