@@ -34,8 +34,7 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 
 # Install bootloader
-grub-install /dev/sda
-grub-mkconfig -o /boot/grub/grub.cfg
+
 
 #makepkg in root
 rm /usr/bin/makepkg
