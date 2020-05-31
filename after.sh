@@ -81,7 +81,10 @@ make clean install
 #setxkbmap -layout 'pl'
 #exec xmonad" >> ~/.xinitrc
 #startx
+su tajo48 << 'NO'
 xmonad
+NO
+
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O ~/.xmonad/xmonad.hs
 
 #echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
