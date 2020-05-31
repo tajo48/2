@@ -46,13 +46,10 @@ chmod +x /usr/bin/makepkg
 pacman -S --noconfirm xmobar firefox feh termite xmonad xmonad-contrib conky
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
-#lightdm-gtk-greeter
-#pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-#systemctl enable lightdm -f
-
-#GDM
-pacman -S --noconfirm gdm
-systemctl enable gdm
+#Lightdm
+lightdm-gtk-greeter
+pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+systemctl enable lightdm -f
 
 #wallpaper
 mkdir /home/tajo48/suckless
