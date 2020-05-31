@@ -85,7 +85,7 @@ su tajo48 << 'NO'
 xmonad
 NO
 
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O ~/.xmonad/xmonad.hs
+wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
 
 #echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #setxkbmap -layout 'pl'" >> ~/.xprofile
