@@ -77,7 +77,7 @@ cd /home/tajo48/suckless/dmenu
 make clean install
 
 #xmonad config
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/build -O /root/.xmonad/build
+wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/build -O /root/.xmonad/build
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
 xmonad --recomile
 
