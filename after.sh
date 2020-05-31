@@ -3,7 +3,7 @@
 #programs
 pacman -S --noconfirm alsa-utils netctl grub os-prober mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft fakeroot binutils patch pkgconf base-devel htop
 #pacman -S --noconfirm neofetch obs-studio blender bashtop
-#pacman -S --noconfirm gnome gnome-extra
+pacman -S --noconfirm gnome gnome-extra termite
 
 
 # Set date time
@@ -43,7 +43,7 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/m
 chmod +x /usr/bin/makepkg
 
 #Xmonad
-pacman -S --noconfirm xmobar firefox feh termite xmonad xmonad-contrib conky
+#pacman -S --noconfirm xmobar firefox feh termite xmonad xmonad-contrib conky
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #xmonad config
