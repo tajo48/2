@@ -43,12 +43,12 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/m
 chmod +x /usr/bin/makepkg
 
 #Xmonad
-#pacman -S --noconfirm xmobar firefox feh termite xmonad xmonad-contrib conky
+pacman -S --noconfirm xmobar firefox feh termite xmonad xmonad-contrib conky
 #https://aur.archlinux.org/cgit/aur.git/snapshot/brave.tar.gz
 
 #xmonad config
 #mkdir /home/tajo48/.xmonad
-#wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
+wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/master/xmonad.hs -O /home/tajo48/.xmonad/xmonad.hs
 
 #lightdm-gtk-greeter
 #pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
