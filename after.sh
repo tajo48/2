@@ -82,6 +82,11 @@ sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/suckless/dmenu/config.
 cd /home/tajo48/suckless/dmenu
 make clean install
 
+echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
+setxkbmap -layout 'pl'
+exec dwm" >> /home/tajo48/.xinitrc
+
+startx
 #echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 #setxkbmap -layout 'pl'" >> ~/.xprofile
 #replace with ~/.xmonad
