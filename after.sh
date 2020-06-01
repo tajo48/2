@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl grub os-prober mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft fakeroot binutils patch pkgconf base-devel htop
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server pulseaudio xorg-xinit curl tar libxft fakeroot binutils patch pkgconf base-devel htop
 #pacman -S --noconfirm neofetch obs-studio blender bashtop
 #pacman -S --noconfirm gnome gnome-extra
 
@@ -34,7 +34,10 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 
 # Install bootloader
-
+pacman -S --noconfirm grub os-prober efibootmgr
+mkdir /boot/efi
+mount /dev/sda1 /boot/efi
+grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
 
 #makepkg in root
 rm /usr/bin/makepkg
