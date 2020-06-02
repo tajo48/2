@@ -18,7 +18,6 @@ mkfs.ext4 /dev/sda2
 
 #mount
 mount /dev/sda2 /mnt
-mkdir /mnt/home
 
 # Set up time
 timedatectl set-ntp true
