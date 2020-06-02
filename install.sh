@@ -9,7 +9,7 @@ setfont Lat2-Terminus16.psfu.gz -m 8859-2
 parted /dev/sda --script mklabel gpt
 parted /dev/sda --script mkpart primary ext4 1MiB 512MiB #boot /dev/sda1
 parted /dev/sda --script mkpart primary ext4 512MiB 100% #root /dev/sda2
-
+set 1 esp on
 #mkfs
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
