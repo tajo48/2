@@ -8,8 +8,8 @@ setfont Lat2-Terminus16.psfu.gz -m 8859-2
 # Setup the disk and partitions
 parted /dev/sda --script mklabel gpt
 parted /dev/sda --script mkpart primary ext4 1MiB 300MiB #boot /dev/sda1
-parted /dev/sda --script mkpart primary ext4 300MiB 20000MiB #root /dev/sda2
-parted /dev/sda --script mkpart primary ext4 20000MiB 100% #root /dev/sda3
+parted /dev/sda --script mkpart primary ext4 300MiB 5000MiB #root /dev/sda2
+parted /dev/sda --script mkpart primary ext4 5000MiB 100% #root /dev/sda3
 
 #mkfs
 mkfs.fat -F32 /dev/sda1
