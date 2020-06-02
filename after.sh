@@ -34,7 +34,8 @@ usermod -aG wheel,audio,video,optical,storage,users tajo48
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 
 # Install bootloader
-pacman -S --noconfirm grub os-prober efibootmgr
+#os-prober
+pacman -S --noconfirm grub efibootmgr
 mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 grub-install --target=x86_64-efi --bootloader-id=GRUB --efi-directory=/boot/efi
