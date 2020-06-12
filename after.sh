@@ -135,6 +135,7 @@ wget https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff
 #patch (temporary)
 patch < dmenu-center-4.8.diff
 patch < dmenu-border-4.9.diff
+sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/dmenu/config.def.h
 ###MKPKG
 #cp config.h config.def.h
 #makekpkg
