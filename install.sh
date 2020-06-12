@@ -30,7 +30,7 @@ pacman-key --refresh-keys
 com
 
 # Install Arch Linux
-pacstrap /mnt base linux pacman sudo
+pacstrap /mnt base linux pacman sudo linux-firmware
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
