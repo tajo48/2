@@ -121,12 +121,27 @@ wget https://dwm.suckless.org/patches/fakefullscreen/dwm-fakefullscreen-20170508
 wget https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff
 wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
+wget https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-6.2.diff
+wget https://dwm.suckless.org/patches/centeredmaster/dwm-centeredmaster-6.1.diff
+wget https://dwm.suckless.org/patches/removeborder/dwm-removeborder-20200520-f09418b.diff
+
 #patch (temporary)
 cp dwm.c dwm.c.orig
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
+read -P "enter"
 patch < dwm-pertag-6.2.diff
+read -P "enter"
 patch < dwm-uselessgap-6.2.diff
+read -P "enter"
 patch < dwm-movestack-6.1.diff
+read -P "enter"
+patch < dwm-scratchpad-6.2.diff
+read -P "enter"
+patch < dwm-centeredmaster-6.1.diff
+read -P "enter"
+patch < dwm-removeborder-20200520-f09418b.diff
+read -P "enter"
+
 ###DMENU
 #wgetpatch (temporary)
 cd /home/tajo48/dmenu
