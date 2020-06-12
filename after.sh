@@ -131,8 +131,10 @@ patch < dwm-movestack-6.1.diff
 #wgetpatch (temporary)
 cd /home/tajo48/dmenu
 wget https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff
+wget https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff
 #patch (temporary)
 patch < dmenu-center-4.8.diff
+patch < dmenu-border-4.9.diff
 ###MKPKG
 #cp config.h config.def.h
 #makekpkg
