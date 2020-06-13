@@ -61,7 +61,7 @@ cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'
 exec dwm
-exec xcompmgr" >> /home/tajo48/.xinitrc
+xcompmgr -c &" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
 #download (almost temporary)
 git clone https://git.suckless.org/dwm/
