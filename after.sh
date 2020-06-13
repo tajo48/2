@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git make alsa-firmware wget xorg-server xorg-xinit curl libxft fakeroot binutils patch pkgconf base-devel  
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git make alsa-firmware wget xorg-server xorg-xinit curl libxft fakeroot binutils patch pkgconf base-devel python-pywal  
 #pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms vlc youtube-dl htop tar p7zip vim vifm xcompmgr
 #pacman -S --noconfirm 
 
