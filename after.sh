@@ -101,10 +101,10 @@ sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/dmenu/config.def.h
 ###ST
 cd /home/tajo48/st
 wget https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
-wget https://st.suckless.org/patches/scrollback/st-scrollback-0.8.2.diff
+wget https://st.suckless.org/patches/scrollback/st-scrollback-20200419-72e3f6c.diff
 
 #patch
-patch < st-scrollback-0.8.2.diff
+patch < st-scrollback-20200419-72e3f6c.diff
 patch < st-alpha-0.8.2.diff
 read -p "enter"
 
