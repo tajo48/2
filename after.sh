@@ -60,7 +60,7 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'
-exec xcompmgr -c &
+#exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
 mkdir /home/tajo48/photos
