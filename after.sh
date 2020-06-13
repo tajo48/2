@@ -46,12 +46,6 @@ rm /usr/bin/makepkg
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/makepkg -O /usr/bin/makepkg
 chmod +x /usr/bin/makepkg
 
-#yay 
-#cd /home/tajo48/suckless
-#git clone https://aur.archlinux.org/yay-git.git
-#cd /home/tajo48/suckless/yay-git
-#makepkg -s -i -c --noconfirm
-
 ###DWM part
 #wallpaper
 mkdir /home/tajo48/photos
@@ -78,6 +72,12 @@ cd /home/tajo48/ARCH-builds/dmenu
 make clean install
 cd /home/tajo48/ARCH-builds/dwm
 make clean install
+
+#yay 
+#cd /home/tajo48/ARCH-builds/
+#git clone https://aur.archlinux.org/yay-git.git
+#cd /home/tajo48/ARCH-builds/yay-git
+#makepkg -s -i -c --noconfirm
 
 
 <<com123
