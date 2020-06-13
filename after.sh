@@ -50,7 +50,10 @@ chmod +x /usr/bin/makepkg
 #wallpaper
 mkdir /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
+su tajo48 << 'NO'
 wal -i /home/tajo48/photos/wallpaper.jpg
+NO
+
 #dwm try
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
@@ -85,9 +88,9 @@ make clean install
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 systemctl enable lightdm -f
 
-su tajo48 << 'NO'
+su tajo48 << 'NOI'
 lightdm
-NO
+NOI
 
 #conky
 #pywal
