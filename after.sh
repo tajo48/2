@@ -127,6 +127,8 @@ wget https://dwm.suckless.org/patches/removeborder/dwm-removeborder-20200520-f09
 
 #patch (temporary)
 cp dwm.c dwm.c.orig
+patch < dwm-removeborder-20200520-f09418b.diff
+read -p "enter"
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 read -p "enter"
 patch < dwm-pertag-6.2.diff
@@ -139,8 +141,7 @@ read -p "enter"
 #read -p "enter"
 patch < dwm-centeredmaster-6.1.diff
 read -p "enter"
-patch < dwm-removeborder-20200520-f09418b.diff
-read -p "enter"
+
 
 ###DMENU
 #wgetpatch (temporary)
