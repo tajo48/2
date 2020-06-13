@@ -2,7 +2,7 @@
 
 #programs
 pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server xorg-xinit curl tar p7zip libxft fakeroot binutils patch pkgconf base-devel xcompmgr picom htop
-#pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms pulseaudio
+#pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms pulseaudio vlc
 #pacman -S --noconfirm 
 
 
@@ -101,9 +101,12 @@ sed -i '/static unsigned int lines/ s/0/15/' /home/tajo48/dmenu/config.def.h
 ###ST
 cd /home/tajo48/st
 wget https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff
+wget https://st.suckless.org/patches/scrollback/st-scrollback-0.8.2.diff
 
 #patch
 patch < st-alpha-0.8.2.diff
+patch < st-scrollback-0.8.2.diff
+read -p "enter"
 
 ###MKPKG
 #cp config.h config.def.h
