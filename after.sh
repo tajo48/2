@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server xorg-xinit curl tar p7zip libxft fakeroot binutils patch pkgconf base-devel xcompmgr picom htop
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server xorg-xinit curl tar p7zip libxft fakeroot binutils patch pkgconf base-devel xcompmgr htop
 #pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms pulseaudio vlc
 #pacman -S --noconfirm 
 
@@ -60,7 +60,8 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'
-exec dwm" >> /home/tajo48/.xinitrc
+exec dwm
+exec xcompmgr" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
 #download (almost temporary)
 git clone https://git.suckless.org/dwm/
