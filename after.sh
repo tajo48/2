@@ -56,7 +56,7 @@ chmod +x /usr/bin/makepkg
 #wallpaper
 mkdir /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
-wal -i /home/tajo48/suckless/photos/wallpaper.jpg
+wal -i /home/tajo48/photos/wallpaper.jpg
 #dwm try
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
