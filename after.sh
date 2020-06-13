@@ -1,8 +1,8 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd vim vifm git make alsa-firmware wget xorg-server xorg-xinit curl tar p7zip libxft fakeroot binutils patch pkgconf base-devel xcompmgr htop
-#pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms pulseaudio vlc
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git make alsa-firmware wget xorg-server xorg-xinit curl libxft fakeroot binutils patch pkgconf base-devel  
+#pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms vlc youtube-dl htop tar p7zip vim vifm xcompmgr
 #pacman -S --noconfirm 
 
 
@@ -47,10 +47,10 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/makepkg -O /usr/
 chmod +x /usr/bin/makepkg
 
 #yay 
-cd /home/tajo48/suckless
-git clone https://aur.archlinux.org/yay-git.git
-cd /home/tajo48/suckless/yay-git
-makepkg -s -i -c --noconfirm
+#cd /home/tajo48/suckless
+#git clone https://aur.archlinux.org/yay-git.git
+#cd /home/tajo48/suckless/yay-git
+#makepkg -s -i -c --noconfirm
 
 ###DWM part
 #wallpaper
@@ -81,7 +81,6 @@ make clean install
 
 <<com123
 #Lightdm
-lightdm-gtk-greeter
 pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 systemctl enable lightdm -f
 
