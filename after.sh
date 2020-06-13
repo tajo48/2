@@ -135,8 +135,8 @@ patch < dwm-uselessgap-6.2.diff
 read -p "enter"
 patch < dwm-movestack-6.1.diff
 read -p "enter"
-patch < dwm-scratchpad-6.2.diff
-read -p "enter"
+#patch < dwm-scratchpad-6.2.diff
+#read -p "enter"
 patch < dwm-centeredmaster-6.1.diff
 read -p "enter"
 patch < dwm-removeborder-20200520-f09418b.diff
