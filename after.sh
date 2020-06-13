@@ -114,7 +114,6 @@ cd /home/tajo48/dmenu
 make clean install
 cd /home/tajo48/dwm
 make clean install
-su tajo48 startx
 
 
 <<com123
