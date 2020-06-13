@@ -139,8 +139,8 @@ read -p "enter"
 #read -p "enter"
 patch < dwm-centeredmaster-6.1.diff
 read -p "enter"
-#patch < dwm-removeborder-20200520-f09418b.diff
-#read -p "enter"
+patch < dwm-removeborder-20200520-f09418b.diff
+read -p "enter"
 
 ###DMENU
 #wgetpatch (temporary)
