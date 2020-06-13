@@ -71,11 +71,11 @@ git clone https://github.com/tajo48/ARCH-builds.git
 ###MKPKG
 #cp config.h config.def.h
 #makekpkg
-cd /home/tajo48/st
+cd /home/tajo48/ARCH-builds/st
 make clean install
-cd /home/tajo48/dmenu
+cd /home/tajo48/ARCH-builds/dmenu
 make clean install
-cd /home/tajo48/dwm
+cd /home/tajo48/ARCH-builds/dwm
 make clean install
 
 
