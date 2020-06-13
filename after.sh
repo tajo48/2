@@ -105,9 +105,9 @@ wget https://st.suckless.org/patches/scrollback/st-scrollback-20200419-72e3f6c.d
 wget https://st.suckless.org/patches/clipboard/st-clipboard-0.8.3.diff
 
 #patch
-patch < st-scrollback-20200419-72e3f6c.diff
-patch < st-alpha-0.8.2.diff
-patch < st-clipboard-0.8.3.diff
+#patch < st-scrollback-20200419-72e3f6c.diff
+#patch < st-alpha-0.8.2.diff
+#patch < st-clipboard-0.8.3.diff
 
 ###MKPKG
 #cp config.h config.def.h
