@@ -60,7 +60,7 @@ wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper
 cd /home/tajo48
 echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'
-exec dwm" >> ~/.xinitrc
+exec dwm" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
 #download (almost temporary)
 git clone https://git.suckless.org/dwm/
@@ -114,7 +114,7 @@ cd /home/tajo48/dmenu
 make clean install
 cd /home/tajo48/dwm
 make clean install
-startx
+su tajo48 startx
 
 
 <<com123
