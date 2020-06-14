@@ -1,8 +1,8 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git   
-#pacman -S --noconfirm neofetch obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms vlc youtube-dl htop tar p7zip xcompmgr
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch
+#pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch virtualbox-host-dkms vlc youtube-dl htop tar p7zip xcompmgr audacity gimp
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils vim patch pkgconf base-devel python-pywal
 
 
