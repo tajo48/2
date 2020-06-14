@@ -69,7 +69,7 @@ sudo make clean install
 cd
 #exec xcompmgr -c &
 exec dwm
-sh /home/tajo48/ARCH-files/bar.sh
+sh /home/tajo48/ARCH-files/bar.sh &
 
 " >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
