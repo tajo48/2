@@ -36,7 +36,7 @@ pacstrap /mnt base linux pacman sudo linux-firmware dosfstools
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Copy post-install system cinfiguration script to new /root
-    wget https://raw.githubusercontent.com/tajo48/2/uefi/after.sh -O /mnt/root/after.sh
+    wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/uefi/after.sh -O /mnt/root/after.sh
     chmod +x /mnt/root/after.sh
 
 # Chroot into new system
