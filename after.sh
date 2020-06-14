@@ -57,7 +57,7 @@ NO
 #dwm try
 cd /home/tajo48
 echo "
-sh /home/tajo48/ARCH-files/bar.sh
+
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 cd /home/tajo48/ARCH-builds/st
@@ -69,6 +69,7 @@ sudo make clean install
 cd
 #exec xcompmgr -c &
 exec dwm
+sh /home/tajo48/ARCH-files/bar.sh
 
 " >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
