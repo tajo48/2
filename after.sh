@@ -55,8 +55,8 @@ wal -i /home/tajo48/ARCH-files/photos
 NO
 
 #dwm try
-echo "
 cd /home/tajo48
+echo "
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 #exec xcompmgr -c &
