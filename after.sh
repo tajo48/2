@@ -67,7 +67,14 @@ cd /home/tajo48/ARCH-builds/dwm
 sudo make clean install
 cd
 #exec xcompmgr -c &
-exec dwm" >> /home/tajo48/.xinitrc
+exec dwm
+
+while true; do
+   xsetroot -name "$( date +"%F %R" )"
+   sleep 1m    # Update time every minute
+done &
+
+" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
 git clone https://github.com/tajo48/ARCH-builds.git
 
