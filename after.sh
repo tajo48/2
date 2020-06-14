@@ -50,6 +50,7 @@ chmod +x /usr/bin/makepkg
 #wallpaper
 mkdir /home/tajo48/photos
 wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
+wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper2.png -O /home/tajo48/photos/wallpaper2.png
 su tajo48 << 'NO'
 wal -i /home/tajo48/photos/wallpaper.jpg
 NO
