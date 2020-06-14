@@ -48,6 +48,7 @@ chmod +x /usr/bin/makepkg
 
 ###DWM part
 #wallpaper
+cd /home/tajo48
 git clone https://github.com/tajo48/ARCH-files.git
 su tajo48 << 'NO'
 wal -i /home/tajo48/ARCH-files/photos
