@@ -59,8 +59,12 @@ cd /home/tajo48
 echo "
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
+cd /home/tajo48/ARCH-builds/st
+make clean install
+cd /home/tajo48/ARCH-builds/dmenu
+make clean install
 cd /home/tajo48/ARCH-builds/dwm
-sudo make clean install
+make clean install
 cd
 #exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
@@ -70,14 +74,6 @@ git clone https://github.com/tajo48/ARCH-builds.git
 
 ###MKPKG
 #cp config.h config.def.h
-#makekpkg
-cd /home/tajo48/ARCH-builds/st
-make clean install
-cd /home/tajo48/ARCH-builds/dmenu
-make clean install
-cd /home/tajo48/ARCH-builds/dwm
-make clean install
-
 
 #yay 
 #cd /home/tajo48/ARCH-builds/
