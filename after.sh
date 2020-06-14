@@ -60,11 +60,11 @@ echo "
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 cd /home/tajo48/ARCH-builds/st
-make clean install
+sudo make clean install
 cd /home/tajo48/ARCH-builds/dmenu
-make clean install
+sudo make clean install
 cd /home/tajo48/ARCH-builds/dwm
-make clean install
+sudo make clean install
 cd
 #exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
