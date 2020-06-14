@@ -57,7 +57,7 @@ NO
 
 #dwm try
 cd /home/tajo48
-wal -i /home/tajo48/photos/wallpaper.jpg
+wal -i /home/tajo48/photos
 setxkbmap -layout 'pl'
 #exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
