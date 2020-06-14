@@ -66,10 +66,9 @@ cd /home/tajo48/ARCH-builds/dmenu
 sudo make clean install
 cd /home/tajo48/ARCH-builds/dwm
 sudo make clean install
-cd
 #exec xcompmgr -c &
 exec dwm
-sh /home/tajo48/ARCH-files/bar.sh &
+/home/tajo48/ARCH-files/bar.sh &
 
 " >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
