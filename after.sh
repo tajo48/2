@@ -76,6 +76,14 @@ make clean install
 cd /home/tajo48/ARCH-builds/dwm
 make clean install
 
+echo "
+#! /bin/bash
+wal -i /home/tajo48/ARCH-files/photos
+cd /home/tajo48/ARCH-builds/dwm
+sudo make clean install
+" >> /home/tajo48/ARCH-files/pywal
+chmod +x /home/tajo48/ARCH-files/pywal
+
 #yay 
 #cd /home/tajo48/ARCH-builds/
 #git clone https://aur.archlinux.org/yay-git.git
