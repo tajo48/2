@@ -3,7 +3,6 @@
 #programs
 pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus
-read -p "enter"
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils vim patch pkgconf base-devel python-pywal
 
 
@@ -58,12 +57,7 @@ NO
 #dwm try
 cd /home/tajo48
 echo "
-
-while true; do
-   xsetroot -name "$( date +"%F %R" )"
-   sleep 1m    # Update time every minute
-done &
-
+sh /home/tajo48/ARCH-files/bar.sh
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 cd /home/tajo48/ARCH-builds/st
