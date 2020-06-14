@@ -59,6 +59,9 @@ cd /home/tajo48
 echo "
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
+cd /home/tajo48/ARCH-builds/dwm
+sudo make clean install
+cd
 #exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
@@ -75,13 +78,6 @@ make clean install
 cd /home/tajo48/ARCH-builds/dwm
 make clean install
 
-echo "
-#! /bin/bash
-wal -i /home/tajo48/ARCH-files/photos
-cd /home/tajo48/ARCH-builds/dwm
-sudo make clean install
-" >> /home/tajo48/pywal
-chmod +x /home/tajo48/pywal
 
 #yay 
 #cd /home/tajo48/ARCH-builds/
