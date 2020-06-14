@@ -62,7 +62,6 @@ setxkbmap -layout 'pl'
 #exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
 git clone https://github.com/tajo48/ARCH-builds.git
 
 
@@ -81,8 +80,8 @@ echo "
 wal -i /home/tajo48/ARCH-files/photos
 cd /home/tajo48/ARCH-builds/dwm
 sudo make clean install
-" >> /home/tajo48/ARCH-files/pywal
-chmod +x /home/tajo48/ARCH-files/pywal
+" >> /home/tajo48/pywal
+chmod +x /home/tajo48/pywal
 
 #yay 
 #cd /home/tajo48/ARCH-builds/
