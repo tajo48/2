@@ -57,7 +57,6 @@ NO
 
 #dwm try
 cd /home/tajo48
-echo "feh --bg-fill /home/tajo48/photos/wallpaper.jpg
 wal -i /home/tajo48/photos/wallpaper.jpg
 setxkbmap -layout 'pl'
 #exec xcompmgr -c &
