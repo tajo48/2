@@ -48,16 +48,14 @@ chmod +x /usr/bin/makepkg
 
 ###DWM part
 #wallpaper
-mkdir /home/tajo48/photos
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper.jpg -O /home/tajo48/photos/wallpaper.jpg
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/photos/wallpaper2.png -O /home/tajo48/photos/wallpaper2.png
+git clone https://github.com/tajo48/ARCH-files.git
 su tajo48 << 'NO'
-wal -i /home/tajo48/photos/wallpaper.jpg
+wal -i /home/tajo48/ARCH-files/photos
 NO
 
 #dwm try
 cd /home/tajo48
-wal -i /home/tajo48/photos
+wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 #exec xcompmgr -c &
 exec dwm" >> /home/tajo48/.xinitrc
