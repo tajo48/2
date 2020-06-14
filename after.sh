@@ -50,14 +50,13 @@ chmod +x /usr/bin/makepkg
 #wallpaper
 cd /home/tajo48
 git clone https://github.com/tajo48/ARCH-files.git
-su tajo48 << 'NO'
+
 cd /home/tajo48
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 #exec xcompmgr -c &
 exec dwm
 " >> /home/tajo48/.xinitrc
-NO
 
 #dwm try
 pacman -S --noconfirm feh firefox rxvt-unicode
