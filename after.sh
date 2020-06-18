@@ -66,12 +66,12 @@ wget https://dwm.suckless.org/patches/uselessgap/dwm-uselessgap-6.2.diff
 wget https://dwm.suckless.org/patches/movestack/dwm-movestack-6.1.diff
 wget https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-6.2.diff
 wget https://dwm.suckless.org/patches/centeredmaster/dwm-centeredmaster-6.1.diff
-wget https://dwm.suckless.org/patches/single_tagset/dwm-single_tagset-20160731-56a31dc.diff
+wget https://raw.githubusercontent.com/bakkeby/patches/master/dwm/dwm-single_tagset-6.2.diff
 
 
 #patch (temporary)
 cp dwm.c dwm.c.orig
-patch < dwm-single_tagset-20160731-56a31dc.diff
+patch < dwm-single_tagset-6.2.diff
 read -p "enter"
 patch < dwm-scratchpad-6.2.diff
 read -p "enter"
