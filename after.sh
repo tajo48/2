@@ -71,13 +71,13 @@ wget https://raw.githubusercontent.com/bakkeby/patches/master/dwm/dwm-single_tag
 
 #patch (temporary)
 cp dwm.c dwm.c.orig
-patch < dwm-single_tagset-6.2.diff
-read -p "enter"
 patch < dwm-scratchpad-6.2.diff
 read -p "enter"
 patch < dwm-fakefullscreen-20170508-ceac8c9.diff
 read -p "enter"
 patch < dwm-pertag-6.2.diff
+read -p "enter"
+patch < dwm-single_tagset-6.2.diff
 read -p "enter"
 patch < dwm-uselessgap-6.2.diff
 read -p "enter"
