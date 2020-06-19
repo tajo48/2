@@ -55,6 +55,7 @@ NO
 #dwm try
 cd /home/tajo48
 echo "
+clipmenud &
 wal -i /home/tajo48/ARCH-files/photos
 setxkbmap -layout 'pl'
 cd /home/tajo48/ARCH-builds/st
