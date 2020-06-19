@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip libnotify
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip clipmenu
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus discord
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils vim patch pkgconf base-devel python-pywal pulseaudio alsa
 
@@ -67,6 +67,7 @@ sudo make clean install
 sudo sh /home/tajo48/ARCH-files/bar.sh &
 cd /home/tajo48
 exec dwm
+clipmenud
 " >> /home/tajo48/.xinitrc
 pacman -S --noconfirm feh firefox rxvt-unicode
 git clone https://github.com/tajo48/ARCH-builds.git
