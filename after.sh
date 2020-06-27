@@ -35,7 +35,7 @@ sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
 
 sed -i '/Port/s/^#//g' /etc/ssh/sshd_config
 sed -i '/Port/ s/22/2137/' /etc/ssh/sshd_config
-
+systemctl enable sshd
 
 
 
