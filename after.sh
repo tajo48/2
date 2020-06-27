@@ -1,7 +1,7 @@
 #! /bin/bash
 
 #programs
-pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip clipmenu rtorrent cura
+pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip clipmenu rtorrent cura nano openssh
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus discord
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils vim patch pkgconf base-devel python-pywal pulseaudio alsa
 
@@ -32,6 +32,12 @@ useradd -m tajo48
 echo -en "root\nroot" | passwd tajo48
 usermod -aG wheel,audio,video,optical,storage,users tajo48
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^#//g' /etc/sudoers
+
+sed -i '/Port/s/^#//g' /etc/ssh/sshd_config
+sed -i '/Port/ s/22/2137/' /etc/ssh/sshd_config
+
+
+
 
 # Install bootloader
 pacman -S --noconfirm grub
