@@ -82,12 +82,20 @@ git clone https://github.com/tajo48/ARCH-builds.git
 
 ###MKPKG
 
-
 #yay 
 cd /home/tajo48/ARCH-builds/
 git clone https://aur.archlinux.org/yay-git.git
 cd /home/tajo48/ARCH-builds/yay-git
 makepkg -s -i -c --noconfirm
+
+# Run https://blackarch.org/strap.sh as root and follow the instructions.
+curl -O https://blackarch.org/strap.sh
+
+# Set execute bit
+chmod +x strap.sh
+
+# Run strap.sh
+sh ./strap.sh 
 
 
 <<com123
