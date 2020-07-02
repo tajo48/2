@@ -87,24 +87,3 @@ cd /home/tajo48/ARCH-builds/
 git clone https://aur.archlinux.org/yay-git.git
 cd /home/tajo48/ARCH-builds/yay-git
 makepkg -s -i -c --noconfirm
-
-# Run https://blackarch.org/strap.sh as root and follow the instructions.
-curl -O https://blackarch.org/strap.sh
-
-# Set execute bit
-chmod +x strap.sh
-
-# Run strap.sh
-sh ./strap.sh 
-
-
-<<com123
-#Lightdm
-pacman -S --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-systemctl enable lightdm -f
-su tajo48 << 'NOI'
-lightdm
-NOI
-#conky
-#pywal
-com123
