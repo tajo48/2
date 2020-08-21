@@ -34,13 +34,13 @@ mkdir /mnt/boot
 swapon /dev/sda1
 
 # Install Arch Linux
-pacstrap /mnt base linux pacman sudo linux-firmware dosfstools
+pacstrap /mnt base linux pacman sudo linux-firmware dosfstools wget
 
 # Generate fstab
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Copy post-install system cinfiguration script to new /root
-    wget https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/bios/after.sh -O /mnt/root/after.sh
+    curl https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/bios/after.sh -o --create-dirs /mnt/root/after.sh 
     chmod +x /mnt/root/after.sh
 
 # Chroot into new system
