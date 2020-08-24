@@ -91,3 +91,4 @@ makepkg -s -i -c --noconfirm
 
 
 #git config --global credential.helper store
+#xcape
