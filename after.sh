@@ -87,3 +87,7 @@ cd /home/tajo48/ARCH-builds/
 git clone https://aur.archlinux.org/yay-git.git
 cd /home/tajo48/ARCH-builds/yay-git
 makepkg -s -i -c --noconfirm
+
+
+
+#git config --global credential.helper store
