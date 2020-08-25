@@ -40,7 +40,7 @@ pacstrap /mnt base linux pacman sudo linux-firmware dosfstools wget
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Copy post-install system cinfiguration script to new /root
-    curl https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/bios/after.sh -o --create-dirs /mnt/root/after.sh 
+    curl -o --create-dirs https://raw.githubusercontent.com/tajo48/ARCH-linux-install-script/bios/after.sh > /mnt/root/after.sh 
     chmod +x /mnt/root/after.sh
 
 # Chroot into new system
