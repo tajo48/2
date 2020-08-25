@@ -46,3 +46,5 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # Chroot into new system
 arch-chroot /mnt /root/after.sh
 
+
+ 
