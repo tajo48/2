@@ -94,3 +94,5 @@ makepkg -s -i -c --noconfirm
 
 #git config --global credential.helper store
 #xcape
+#sudo chsh -s /bin/zsh tajo48
+#(pacman zsh)
