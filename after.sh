@@ -54,6 +54,7 @@ chmod +x /usr/bin/makepkg
 #wallpaper
 cd /home/tajo48
 git clone https://github.com/tajo48/ARCH-files.git
+git clone https://github.com/tajo48/ARCH-builds.git
 su tajo48 << 'NO'
 wal -i /home/tajo48/ARCH-files/photos
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
