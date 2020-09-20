@@ -4,7 +4,7 @@
 pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip clipmenu rtorrent cura nano openssh notepadqq tmux arandr slock
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus discord nautilus
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils gvim neovim patch pkgconf base-devel python-pywal pulseaudio alsa
-
+pacman -S --noconfirm firefox 
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -64,7 +64,8 @@ NO
 #dwm try
 cd /home/tajo48
 echo -e "clipmenud &\nwal -i /home/tajo48/ARCH-files/photos\nsetxkbmap -layout 'pl'\nsetxkbmap -option 'caps:swapescape'\nxset r rate 300 50\ncd /home/tajo48/ARCH-builds/st\nsudo make clean install\ncd /home/tajo48/ARCH-builds/dmenu\nsudo make clean install\ncd /home/tajo48/ARCH-builds/dwm\nsudo make clean install\n#exec xcompmgr -c &\nsudo sh /home/tajo48/ARCH-files/bar.sh &\ncd /home/tajo48\nexec dwm\nclipmenud" >> /home/tajo48/.xinitrc
-
+mkdir /home/tajo48/.config/nvim
+cp /home/tajo48/ARCH-files/init.vim /home/tajo48/.config/nvim/init.vim
 
 
 ###MKPKG
