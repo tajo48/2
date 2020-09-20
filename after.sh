@@ -4,7 +4,7 @@
 pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip clipmenu rtorrent cura nano openssh notepadqq tmux arandr slock
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus discord nautilus
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils gvim neovim patch pkgconf base-devel python-pywal pulseaudio alsa
-pacman -S --noconfirm firefox 
+pacman -S --noconfirm firefox zsh
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
@@ -64,8 +64,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
        
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-chsh -s $(which zsh)
 NO
 
 #dwm try
@@ -74,7 +72,7 @@ echo -e "clipmenud &\nwal -i /home/tajo48/ARCH-files/photos\nsetxkbmap -layout '
 mkdir /home/tajo48/.config/nvim
 cp /home/tajo48/ARCH-files/init.vim /home/tajo48/.config/nvim/init.vim
 cp /home/tajo48/ARCH-files/zshrc /home/tajo48/.zshrc
-
+chsh -s /bin/zsh tajo48
 ###MKPKG
 
 #yay 
