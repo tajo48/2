@@ -82,7 +82,7 @@ cd /home/tajo48/ARCH-builds/yay-git
 makepkg -s -i -c --noconfirm
 
 
-
+chmod a=rwx /home/*
 #git config --global credential.helper store
 #xcape
 #sudo chsh -s /bin/zsh tajo48
