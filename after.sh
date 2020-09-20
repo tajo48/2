@@ -42,7 +42,7 @@ systemctl enable sshd
 # Install bootloader
 pacman -S --noconfirm grub
 # Install bootloader
-grub-install /dev/sda
+grub-install --target=i386-pc /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
 #makepkg in root
@@ -66,7 +66,7 @@ cd /home/tajo48
 echo -e "clipmenud &\nwal -i /home/tajo48/ARCH-files/photos\nsetxkbmap -layout 'pl'\nsetxkbmap -option 'caps:swapescape'\nxset r rate 300 50\ncd /home/tajo48/ARCH-builds/st\nsudo make clean install\ncd /home/tajo48/ARCH-builds/dmenu\nsudo make clean install\ncd /home/tajo48/ARCH-builds/dwm\nsudo make clean install\n#exec xcompmgr -c &\nsudo sh /home/tajo48/ARCH-files/bar.sh &\ncd /home/tajo48\nexec dwm\nclipmenud" >> /home/tajo48/.xinitrc
 mkdir /home/tajo48/.config/nvim
 cp /home/tajo48/ARCH-files/init.vim /home/tajo48/.config/nvim/init.vim
-
+cp /home/tajo48/ARCH-files/zshrc /home/tajo48/.zshrc
 
 ###MKPKG
 
