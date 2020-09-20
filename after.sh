@@ -62,26 +62,8 @@ NO
 
 #dwm try
 cd /home/tajo48
-echo "
-clipmenud &
-wal -i /home/tajo48/ARCH-files/photos
-setxkbmap -layout 'pl'
-setxkbmap -option 'caps:swapescape'
-xset r rate 300 50
-cd /home/tajo48/ARCH-builds/st
-sudo make clean install
-cd /home/tajo48/ARCH-builds/dmenu
-sudo make clean install
-cd /home/tajo48/ARCH-builds/dwm
-sudo make clean install
-#exec xcompmgr -c &
-sudo sh /home/tajo48/ARCH-files/bar.sh &
-cd /home/tajo48
-exec dwm
-clipmenud
-" >> /home/tajo48/.xinitrc
-pacman -S --noconfirm feh firefox rxvt-unicode
-git clone https://github.com/tajo48/ARCH-builds.git
+echo -e "clipmenud &\nwal -i /home/tajo48/ARCH-files/photos\nsetxkbmap -layout 'pl'\nsetxkbmap -option 'caps:swapescape'\nxset r rate 300 50\ncd /home/tajo48/ARCH-builds/st\nsudo make clean install\ncd /home/tajo48/ARCH-builds/dmenu\nsudo make clean install\ncd /home/tajo48/ARCH-builds/dwm\nsudo make clean install\n#exec xcompmgr -c &\nsudo sh /home/tajo48/ARCH-files/bar.sh &\ncd /home/tajo48\nexec dwm\nclipmenud" >> /home/tajo48/.xinitrc
+
 
 
 ###MKPKG
