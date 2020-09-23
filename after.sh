@@ -47,7 +47,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 #makepkg in root
 rm /usr/bin/makepkg
-wget https://raw.githubusercontent.com/tajo48/ARCH-files/master/makepkg -O /usr/bin/makepkg
+curl -k -o /usr/bin/makepkg https://raw.githubusercontent.com/tajo48/ARCH-files/master/makepkg
 chmod +x /usr/bin/makepkg
 
 ###DWM part
@@ -57,13 +57,13 @@ git clone https://github.com/tajo48/ARCH-files.git
 git clone https://github.com/tajo48/ARCH-builds.git
 su tajo48 << 'NO'
 wal -i /home/tajo48/ARCH-files/photos
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -k -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+sh -c 'curl -fLo -k "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
        
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL -k https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 NO
 
 #dwm try
