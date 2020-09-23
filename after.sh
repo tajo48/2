@@ -60,10 +60,10 @@ wal -i /home/tajo48/ARCH-files/photos
 curl -k -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
-sh -c 'curl -fLo -k "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+sh -c 'curl -k -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
        
-sh -c "$(curl -fsSL -k https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -k -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 NO
 
 #dwm try
