@@ -83,7 +83,6 @@ makepkg -s -i -c --noconfirm
 
 
 chmod a=rwx /home/*
-#git config --global credential.helper store
-#xcape
+git config --global credential.helper store
 #sudo chsh -s /bin/zsh tajo48
 #(pacman zsh)
