@@ -86,3 +86,4 @@ chown tajo48 -R /home/tajo48/
 git config --global credential.helper store
 #sudo chsh -s /bin/zsh tajo48
 #(pacman zsh)
+#nvim +PlugInstall +CocInstall coc-cord +qa
