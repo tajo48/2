@@ -83,9 +83,7 @@ cd /home/tajo48/ARCH-builds/yay-git
 makepkg -s -i -c --noconfirm
 
 chown tajo48 -R /home/tajo48/
-git config --global user.email "tajo161626@gmail.com"
-git config --global user.name "tajo48"
-git config --global credential.helper store
+
 #sudo chsh -s /bin/zsh tajo48
 #(pacman zsh)
 #nvim +PlugInstall +CocInstall coc-cord +qa
