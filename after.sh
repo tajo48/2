@@ -5,7 +5,7 @@ pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git 
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus discord nautilus
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils gvim neovim patch pkgconf base-devel python-pywal pulseaudio alsa
 pacman -S --noconfirm firefox zsh feh virtualbox-guest-utils python-pynvim nodejs yarn
-
+pacman -S --noconfirm xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau xf86-video-fbdev xf86-video-intel
 
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
