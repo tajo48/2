@@ -7,7 +7,7 @@ pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host
 pacman -S --noconfirm vifm make alsa-firmware wget xorg xorg-server xorg-xinit curl libxft fakeroot binutils gvim neovim patch pkgconf base-devel python-pywal pulseaudio alsa
 pacman -S --noconfirm firefox zsh feh virtualbox-guest-utils python-pynvim nodejs yarn torbrowser-launcher
 pacman -S --noconfirm xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau xf86-video-fbdev
-
+pacman -S --noconfirm grub
 # Set date time
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
 hwclock --systohc
@@ -39,15 +39,12 @@ sed -i '/Port/s/^#//g' /etc/ssh/sshd_config
 sed -i '/Port/ s/22/2137/' /etc/ssh/sshd_config
 systemctl enable sshd
 
-
-
-if [ -n "$2" ]; then
+if [ "$2" == "pen" ];
+then
 grub-install --target=i386-pc ${1} --recheck
 grub-install --target=x86_64-efi --efi-directory=esp --boot-directory=esp --removable --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
 else
-# Install bootloader
-pacman -S --noconfirm grub
-# Install bootloader
 grub-install --target=i386-pc ${1} 
 grub-mkconfig -o /boot/grub/grub.cfg
 fi
