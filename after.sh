@@ -1,5 +1,6 @@
 #! /bin/bash
 
+
 #programs
 pacman -S --noconfirm alsa-utils netctl mtools dialog wpa_supplicant dhcpcd git neofetch mc xclip clipmenu rtorrent cura nano openssh notepadqq tmux arandr slock
 pacman -S --noconfirm obs-studio blender bashtop calc virtualbox virtualbox-host-modules-arch vlc youtube-dl htop tar p7zip xcompmgr audacity gimp cmus discord nautilus
@@ -40,11 +41,18 @@ systemctl enable sshd
 
 
 
+if [ -n "$2" ]; then
+grub-install --target=i386-pc ${1} --recheck
+grub-install --target=x86_64-efi --efi-directory=esp --boot-directory=esp --removable --recheck
+else
 # Install bootloader
 pacman -S --noconfirm grub
 # Install bootloader
-grub-install --target=i386-pc /dev/sda
+grub-install --target=i386-pc ${1} 
 grub-mkconfig -o /boot/grub/grub.cfg
+fi
+
+
 
 #makepkg in root
 rm /usr/bin/makepkg

@@ -1,22 +1,44 @@
 #! /bin/bash
+selectdisk(){
+		items=$(lsblk -d -p -n -l -o NAME,SIZE -e 7,11)
+		options=()
+		IFS_ORIG=$IFS
+		IFS=$'\n'
+		for item in ${items}
+		do  
+				options+=("${item}" "")
+		done
+		IFS=$IFS_ORIG
+		result=$(whiptail --backtitle "${APPTITLE}" --title "${1}" --menu "" 0 0 0 "${options[@]}" 3>&1 1>&2 2>&3)
+		if [ "$?" != "0" ]
+		then
+				return 1
+		fi
+		return 0    
+}
+
+selectdisk
+disk=${result%%\ *}
+
+
 
 # Font
 loadkeys pl
 setfont Lat2-Terminus16.psfu.gz -m 8859-2
 
 # Setup the disk and partitions
-parted /dev/sda --script mklabel msdos
-parted /dev/sda --script mkpart primary linux-swap 1MiB 300MiB #boot /dev/sda1
-parted /dev/sda --script mkpart primary ext4 300MiB 100% #root /dev/sda2
-parted /dev/sda --script set 2 boot on
+parted ${disk} --script mklabel msdos
+parted ${disk} --script mkpart primary linux-swap 1MiB 300MiB #boot /dev/sda1
+parted ${disk} --script mkpart primary ext4 300MiB 100% #root /dev/sda2
+parted ${disk} --script set 2 boot on
 
 # Wipefs
-wipefs /dev/sda1
-wipefs /dev/sda2
+wipefs ${disk}1
+wipefs ${disk}2
 
 # Mkfs
-mkfs.ext4 /dev/sda2
-mkswap /dev/sda1
+mkfs.ext4 ${disk}2
+mkswap ${disk}1
 
 # Set up time
 timedatectl set-ntp true
@@ -28,10 +50,11 @@ pacman-key --populate archlinux
 pacman-key --refresh-keys
 com
 
+
 # Mount the partitions
-mount /dev/sda2 /mnt
+mount ${disk} /mnt
 mkdir /mnt/boot
-swapon /dev/sda1
+swapon ${disk}1
 
 # Install Arch Linux
 pacstrap /mnt base linux pacman sudo linux-firmware dosfstools wget
@@ -44,7 +67,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
     chmod +x /mnt/root/after.sh
 
 # Chroot into new system
-arch-chroot /mnt /root/after.sh
-
+arch-chroot /mnt /root/after.sh ${disk} ${1}
 
  
