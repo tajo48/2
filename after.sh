@@ -39,15 +39,17 @@ sed -i '/Port/s/^#//g' /etc/ssh/sshd_config
 sed -i '/Port/ s/22/2137/' /etc/ssh/sshd_config
 systemctl enable sshd
 
-if [ "$2" == "pen" ];
-then
-grub-install --target=i386-pc ${1} --recheck
-grub-install --target=x86_64-efi --efi-directory=esp --boot-directory=esp --removable --recheck
-grub-mkconfig -o /boot/grub/grub.cfg
-else
+# UEFI SUKS 
+# THIS POST WAS MADE BY BIOS GANG
+#if [ "$2" == "pen" ];
+#then
+#grub-install --target=i386-pc ${1} --recheck
+#grub-install --target=x86_64-efi --efi-directory=esp --boot-directory=esp --removable --recheck
+#grub-mkconfig -o /boot/grub/grub.cfg
+#else
 grub-install --target=i386-pc ${1} 
 grub-mkconfig -o /boot/grub/grub.cfg
-fi
+#fi
 
 
 
