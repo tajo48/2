@@ -52,7 +52,7 @@ com
 
 
 # Mount the partitions
-mount ${disk} /mnt
+mount ${disk}2 /mnt
 mkdir /mnt/boot
 swapon ${disk}1
 
