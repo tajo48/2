@@ -26,7 +26,30 @@ disk=${result%%\ *}
 loadkeys pl
 setfont Lat2-Terminus16.psfu.gz -m 8859-2
 
-# Setup the disk and partitions
+
+if [ "$1" == "pen" ];
+then
+parted ${disk} --script mklabel msdos
+parted ${disk} --script mkpart primary fat32 1MiB 300MiB #boot /dev/sda1
+parted ${disk} --script mkpart primary linux-swap 300MiB 820MiB #boot /dev/sda1
+parted ${disk} --script mkpart primary ext4 820MiB 100% #boot /dev/sda1
+
+
+wipefs ${disk}1
+wipefs ${disk}2
+wipefs ${disk}3
+
+mkfs.fat -F32 ${disk}1
+mkswap ${disk}2
+mkfs.ext4 ${disk}3
+
+mount ${disk}3 /mnt
+swapon ${disk}2
+mkdir /mnt/efi
+mkdir /mnt/boot
+
+
+else
 parted ${disk} --script mklabel msdos
 parted ${disk} --script mkpart primary linux-swap 1MiB 300MiB #boot /dev/sda1
 parted ${disk} --script mkpart primary ext4 300MiB 100% #root /dev/sda2
@@ -40,6 +63,14 @@ wipefs ${disk}2
 mkfs.ext4 ${disk}2
 mkswap ${disk}1
 
+# Mount the partitions
+mount ${disk}2 /mnt
+mkdir /mnt/boot
+swapon ${disk}1
+fi
+
+
+# Setup the disk and partitions
 # Set up time
 timedatectl set-ntp true
 
@@ -50,11 +81,6 @@ pacman-key --populate archlinux
 pacman-key --refresh-keys
 com
 
-
-# Mount the partitions
-mount ${disk}2 /mnt
-mkdir /mnt/boot
-swapon ${disk}1
 
 # Install Arch Linux
 pacstrap /mnt base linux pacman sudo linux-firmware dosfstools wget
