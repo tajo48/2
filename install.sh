@@ -27,29 +27,30 @@ loadkeys pl
 setfont Lat2-Terminus16.psfu.gz -m 8859-2
 
 
-if [ "$1" == "pen" ];
-then
-parted ${disk} --script mklabel msdos
-parted ${disk} --script mkpart primary fat32 1MiB 300MiB #boot /dev/sda1
-parted ${disk} --script mkpart primary linux-swap 300MiB 820MiB #boot /dev/sda1
-parted ${disk} --script mkpart primary ext4 820MiB 100% #boot /dev/sda1
+# if [ "$1" == "pen" ];
+# then
+# parted ${disk} --script mklabel msdos
+# parted ${disk} --script mkpart primary fat32 1MiB 300MiB #boot /dev/sda1
+# parted ${disk} --script mkpart primary linux-swap 300MiB 820MiB #boot /dev/sda1
+# parted ${disk} --script mkpart primary ext4 820MiB 100% #boot /dev/sda1
+# parted ${disk} --script set 1 boot on
+
+# wipefs ${disk}1
+# wipefs ${disk}2
+# wipefs ${disk}3
+
+# mkfs.fat -F32 ${disk}1
+# mkswap ${disk}2
+# mkfs.ext4 ${disk}3
 
 
-wipefs ${disk}1
-wipefs ${disk}2
-wipefs ${disk}3
-
-mkfs.fat -F32 ${disk}1
-mkswap ${disk}2
-mkfs.ext4 ${disk}3
-
-mount ${disk}3 /mnt
-swapon ${disk}2
-mkdir /mnt/efi
-mkdir /mnt/boot
+# mount ${disk}3 /mnt
+# swapon ${disk}2
+# mkdir /mnt/efi
+# mkdir /mnt/boot
 
 
-else
+# else
 parted ${disk} --script mklabel msdos
 parted ${disk} --script mkpart primary linux-swap 1MiB 300MiB #boot /dev/sda1
 parted ${disk} --script mkpart primary ext4 300MiB 100% #root /dev/sda2
@@ -67,7 +68,7 @@ mkswap ${disk}1
 mount ${disk}2 /mnt
 mkdir /mnt/boot
 swapon ${disk}1
-fi
+# fi
 
 
 # Setup the disk and partitions
@@ -93,6 +94,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
     chmod +x /mnt/root/after.sh
 
 # Chroot into new system
-arch-chroot /mnt /root/after.sh ${disk} ${1}
+arch-chroot /mnt /root/after.sh ${disk} #${1}
 
  

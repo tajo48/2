@@ -39,22 +39,15 @@ sed -i '/Port/s/^#//g' /etc/ssh/sshd_config
 sed -i '/Port/ s/22/2137/' /etc/ssh/sshd_config
 systemctl enable sshd
 
-if [ "$2" == "pen" ];
-then
-
-grub-install --target=i386-pc ${1} --recheck
-
-read -p "Press enter to continue"
-grub-install --target=x86_64-efi ${1} --efi-directory=/efi --boot-directory=/boot --removable --recheck
-
-read -p "Press enter to continue"
-grub-mkconfig -o /boot/grub/grub.cfg
-
-read -p "Press enter to continue"
-else
+# if [ "$2" == "pen" ];
+# then
+# grub-install --target=i386-pc ${1} --recheck
+# grub-install --target=x86_64-efi ${1} --efi-directory=/efi --boot-directory=/boot --removable --recheck
+# grub-mkconfig -o /boot/grub/grub.cfg
+# else
 grub-install --target=i386-pc ${1} 
 grub-mkconfig -o /boot/grub/grub.cfg
-fi
+# fi
 
 
 
